@@ -8,7 +8,6 @@ C_SRCS += \
 ../Core/Src/adc.c \
 ../Core/Src/gpio.c \
 ../Core/Src/i2c.c \
-../Core/Src/main.c \
 ../Core/Src/stm32g0xx_hal_msp.c \
 ../Core/Src/stm32g0xx_it.c \
 ../Core/Src/syscalls.c \
@@ -24,7 +23,6 @@ C_DEPS += \
 ./Core/Src/adc.d \
 ./Core/Src/gpio.d \
 ./Core/Src/i2c.d \
-./Core/Src/main.d \
 ./Core/Src/stm32g0xx_hal_msp.d \
 ./Core/Src/stm32g0xx_it.d \
 ./Core/Src/syscalls.d \

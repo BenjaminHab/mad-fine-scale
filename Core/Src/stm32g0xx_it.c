@@ -84,7 +84,20 @@ void NMI_Handler(void)
 void HardFault_Handler(void)
 {
   /* USER CODE BEGIN HardFault_IRQn 0 */
-
+	/*adress of the last command will be stored in the R1 register*/
+		__asm volatile (
+		    " movs r0,#4       \n"
+		    " movs r1, lr      \n"
+		    " tst r0, r1       \n"
+		    " beq _MSP         \n"
+		    " mrs r0, psp      \n"
+		    " b _HALT          \n"
+		  "_MSP:               \n"
+		    " mrs r0, msp      \n"
+		  "_HALT:              \n"
+		    " ldr r1,[r0,#20]  \n"
+		    " bkpt #0          \n"
+		  );
   /* USER CODE END HardFault_IRQn 0 */
   while (1)
   {

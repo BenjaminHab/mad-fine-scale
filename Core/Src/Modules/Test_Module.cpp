@@ -16,9 +16,7 @@ Display_Test::Display_Test(){
 void Display_Test::perform(){
 	u8g2_FirstPage(peripherals.display->u8g2);
 	do
-	{
-
-		u8g2_DrawStr(peripherals.display->u8g2, 4, 9, column_1_text);
+	{	u8g2_DrawStr(peripherals.display->u8g2, 4, 9, column_1_text);
 //		u8g2_DrawStr(peripherals.display->u8g2, 4, 21, column_1_str);
 		u8g2_DrawStr(peripherals.display->u8g2, 44, 9, column_2_text);
 //		u8g2_DrawStr(peripherals.display->u8g2, 44, 21, column_2_str);
