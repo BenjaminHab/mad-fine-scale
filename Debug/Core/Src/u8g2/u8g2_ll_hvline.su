@@ -1,0 +1,4 @@
+u8g2_ll_hvline.c:161:13:u8g2_draw_pixel_vertical_top_lsb	12	static
+u8g2_ll_hvline.c:306:13:u8g2_draw_pixel_horizontal_right_lsb	12	static
+u8g2_ll_hvline.c:201:6:u8g2_ll_hvline_vertical_top_lsb	24	static
+u8g2_ll_hvline.c:346:6:u8g2_ll_hvline_horizontal_right_lsb	24	static
