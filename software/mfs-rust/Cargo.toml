@@ -1,0 +1,20 @@
+[package]
+name = "mfs-rust"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+opt-level = 'z' # turn on maximum optimizations. We only have 64kB
+lto = true      # Link-time-optimizations for further size reduction
+
+[dependencies]
+critical-section = "1.0"
+panic-halt = "0.2.0"
+cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
+cortex-m-rt = "0.7.2"
+vcell = "0.1.2"
+rtt-target = "0.5.0"
+stm32g0xx-hal = {version = "0.2.0", features = ["stm32g070", "rt"]}
+panic-semihosting = "0.6.0"
+cortex-m-semihosting = "0.5.0"
+fugit = "0.3.7"

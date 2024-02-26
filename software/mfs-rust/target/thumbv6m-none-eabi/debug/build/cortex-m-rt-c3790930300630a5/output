@@ -1,0 +1,5 @@
+cargo:rustc-cfg=cortex_m
+cargo:rustc-cfg=armv6m
+cargo:rustc-link-search=/home/benjamin/Projects/mad-fine-scale/software/mfs-rust/target/thumbv6m-none-eabi/debug/build/cortex-m-rt-c3790930300630a5/out
+cargo:rerun-if-changed=build.rs
+cargo:rerun-if-changed=link.x.in

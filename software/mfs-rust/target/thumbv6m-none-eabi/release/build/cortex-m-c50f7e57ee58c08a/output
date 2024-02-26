@@ -1,0 +1,4 @@
+cargo:rustc-link-lib=static=cortex-m
+cargo:rustc-link-search=/home/benjamin/Projects/mad-fine-scale/software/mfs-rust/target/thumbv6m-none-eabi/release/build/cortex-m-c50f7e57ee58c08a/out
+cargo:rustc-cfg=cortex_m
+cargo:rustc-cfg=armv6m

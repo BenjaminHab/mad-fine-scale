@@ -1,0 +1,9 @@
+[default.general]
+chip = "STM32G070CBTx"
+
+# No need to set this again, other profiles inherit from the "default" profile
+#[with_rtt.general]
+#chip = "STM32F401CCUx"
+
+[default.rtt]
+enabled = true

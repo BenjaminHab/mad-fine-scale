@@ -1,2 +1,0 @@
-ADC_Module.cpp:5:1:ADCobj::ADCobj()	0	static
-ADC_Module.cpp:10:10:uint32_t ADCobj::read(uint8_t)	8	static

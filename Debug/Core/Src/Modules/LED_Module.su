@@ -1,4 +1,0 @@
-LED_Module.cpp:3:1:LED::LED(Output*)	0	static
-LED_Module.cpp:8:6:void LED::setup(Output*)	0	static
-LED_Module.cpp:14:6:void LED::on()	8	static
-LED_Module.cpp:18:6:void LED::off()	8	static

@@ -1,8 +1,0 @@
-Menu_Module.cpp:12:1:Menu::Menu(Encoder*, Display*)	24	static
-Menu_Module.cpp:102:6:void insert_menu(submenu_t*, char*, submenu_t*, submenu_t*, submenu_t*, setting_t*)	8	static
-Menu_Module.cpp:131:6:void append_menu(submenu_t*, char*, submenu_t*, setting_t*)	16	static
-Menu_Module.cpp:137:6:void close_menu_circle(submenu_t*, submenu_t*)	16	static
-stl_tree.h:1907:5:void std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_erase(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Link_type) [with _Key = int; _Val = std::pair<const int, setting*>; _KeyOfValue = std::_Select1st<std::pair<const int, setting*> >; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, setting*> >]	16	static
-stl_tree.h:1871:7:std::_Rb_tree_node<_Val>* std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_copy(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Const_Link_type, std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Base_ptr, _NodeGen&) [with _NodeGen = std::_Rb_tree<int, std::pair<const int, setting*>, std::_Select1st<std::pair<const int, setting*> >, std::less<int>, std::allocator<std::pair<const int, setting*> > >::_Alloc_node; _Key = int; _Val = std::pair<const int, setting*>; _KeyOfValue = std::_Select1st<std::pair<const int, setting*> >; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, setting*> >]	32	static
-Menu_Module.hpp:50:7:Menu::Menu(const Menu&)	24	static
-Menu_Module.cpp:32:6:void Menu::enter()	72	static

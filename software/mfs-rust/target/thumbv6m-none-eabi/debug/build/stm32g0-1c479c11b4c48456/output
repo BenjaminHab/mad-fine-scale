@@ -1,0 +1,3 @@
+cargo:rustc-link-search=/home/benjamin/Projects/mad-fine-scale/software/mfs-rust/target/thumbv6m-none-eabi/debug/build/stm32g0-1c479c11b4c48456/out
+cargo:rerun-if-changed=src/stm32g070/device.x
+cargo:rerun-if-changed=build.rs

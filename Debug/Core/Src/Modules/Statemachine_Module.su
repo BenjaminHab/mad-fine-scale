@@ -1,8 +1,0 @@
-std_function.h:298:7:) [with _Functor = void (*)(unsigned char*, Peripherals*); _ArgTypes = {unsigned char*, Peripherals*}]	8	static
-std_function.h:196:2:static bool std::_Function_base::_Base_manager<_Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Functor = void (*)(unsigned char*, Peripherals*)]	0	static
-Statemachine_Module.cpp:6:6:void error_func(uint8_t*, Peripherals*)	8	static
-Statemachine_Module.cpp:14:1:Statemachine::Statemachine()	0	static
-Statemachine_Module.cpp:30:1:State::State()	0	static
-std_function.h:683:5:) const [with _Res = void; _ArgTypes = {unsigned char*, Peripherals*}]	16	static
-Statemachine_Module.cpp:35:6:void State::enter(uint8_t*, Peripherals*)	16	static
-Statemachine_Module.cpp:19:6:void Statemachine::enter()	8	static

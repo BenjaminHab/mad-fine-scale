@@ -1,2 +1,0 @@
-RCC_Module.cpp:4:1:RCC_Interface::RCC_Interface()	8	static
-RCC_Module.cpp:9:6:void RCC_Interface::set_system_clock(Clock_Source)	0	static
