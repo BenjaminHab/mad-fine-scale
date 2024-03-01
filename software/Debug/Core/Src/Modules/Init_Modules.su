@@ -1,0 +1,38 @@
+std_function.h:196:2:static bool std::_Function_base::_Base_manager<_Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>]	0	static
+std_function.h:196:2:static bool std::_Function_base::_Base_manager<_Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>]	0	static
+std_function.h:298:7:) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>; _ArgTypes = {unsigned char*, Peripherals*}]	0	static
+std_function.h:196:2:static bool std::_Function_base::_Base_manager<_Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>]	0	static
+std_function.h:196:2:static bool std::_Function_base::_Base_manager<_Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>]	0	static
+std_function.h:298:7:) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>; _ArgTypes = {unsigned char*, Peripherals*}]	0	static
+std_function.h:196:2:static bool std::_Function_base::_Base_manager<_Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>]	0	static
+std_function.h:196:2:static bool std::_Function_base::_Base_manager<_Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>]	0	static
+std_function.h:196:2:static bool std::_Function_base::_Base_manager<_Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>]	0	static
+std_function.h:196:2:static bool std::_Function_base::_Base_manager<_Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>]	0	static
+std_function.h:196:2:static bool std::_Function_base::_Base_manager<_Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>]	0	static
+std_function.h:298:7:) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>; _ArgTypes = {unsigned char*, Peripherals*}]	8	static
+std_function.h:298:7:) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>; _ArgTypes = {unsigned char*, Peripherals*}]	16	static
+std_function.h:298:7:) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>; _ArgTypes = {unsigned char*, Peripherals*}]	16	static
+Init_Modules.cpp:430:9:uint8_t u8x8_stm32_gpio_and_delay(u8x8_t*, uint8_t, uint8_t, void*)	32	static,ignoring_inline_asm
+Init_Modules.cpp:527:9:uint8_t u8x8_byte_hw_i2c(u8x8_t*, uint8_t, uint8_t, void*)	16	static
+std_function.h:298:7:) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>; _ArgTypes = {unsigned char*, Peripherals*}]	0	static
+std_function.h:298:7:) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>; _ArgTypes = {unsigned char*, Peripherals*}]	0	static
+std_function.h:298:7:) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>; _ArgTypes = {unsigned char*, Peripherals*}]	0	static
+std_function.h:298:7:) [with _Functor = Statemachine::setup()::<lambda(uint8_t*, Peripherals*)>; _ArgTypes = {unsigned char*, Peripherals*}]	0	static
+std_function.h:257:5:std::_Function_base::~_Function_base()	8	static
+Init_Modules.cpp:56:6:void Display::setup(u8x8_msg_cb, u8x8_msg_cb)	16	static
+Init_Modules.cpp:70:6:void Encoder::setup()	48	static
+Init_Modules.cpp:110:6:void ADCobj::setup()	0	static
+Statemachine_Module.hpp:20:7:State::~State()	8	static
+Init_Modules.cpp:356:15:void __tcf_3()	8	static
+Init_Modules.cpp:336:15:void __tcf_2()	8	static
+Init_Modules.cpp:210:15:void __tcf_1()	8	static
+Init_Modules.cpp:377:6:void RCC_Interface::setup()	0	static
+Init_Modules.cpp:382:6:void weld_pulse(setting_t*)	0	static
+Init_Modules.cpp:410:6:void setup_OC()	24	static
+std_function.h:547:12:)>&) [with _Res = void; _ArgTypes = {unsigned char*, Peripherals*}]	24	static
+stl_tree.h:1907:5:void std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_erase(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Link_type) [with _Key = int; _Val = std::pair<const int, setting*>; _KeyOfValue = std::_Select1st<std::pair<const int, setting*> >; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, setting*> >]	16	static
+Init_Modules.cpp:196:37:void __tcf_0()	8	static
+stl_tree.h:2085:5:std::pair<std::_Rb_tree_node_base*, std::_Rb_tree_node_base*> std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_get_insert_unique_pos(const key_type&) [with _Key = int; _Val = std::pair<const int, setting*>; _KeyOfValue = std::_Select1st<std::pair<const int, setting*> >; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, setting*> >]	24	static
+stl_map.h:510:7:std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type& std::map<_Key, _Tp, _Compare, _Alloc>::operator[](std::map<_Key, _Tp, _Compare, _Alloc>::key_type&&) [with _Key = int; _Tp = setting*; _Compare = std::less<int>; _Alloc = std::allocator<std::pair<const int, setting*> >]	48	static
+Init_Modules.cpp:12:6:void Menu::setup()	48	static
+Init_Modules.cpp:173:6:void Statemachine::setup()	48	static

@@ -1,0 +1,10 @@
+# .cargo/config
+[build]
+# Always compile for the instruction set of the STM32F1
+target = "thumbv6m-none-eabi"
+
+#[target.armv6m]
+#runner = 'probe-rs run --chip stm32g070CBTx'
+
+# use the Tlink.x scrip from the cortex-m-rt crate
+rustflags = [ "-C", "link-arg=-Tlink.x"]

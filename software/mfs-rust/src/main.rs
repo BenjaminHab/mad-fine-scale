@@ -20,7 +20,8 @@ use rtt_target::{rprintln, rtt_init_print};
 use fugit::Rate;
 
 // TODO: Get list with Pin aliases
-// TODO: Get 48MHz HSE Oscillator working
+// TODO: Get 48MHz HSE Oscillator working (and check it)
+// TODO: Create remote repository and sync
 // TODO: Get I2C for Rheo working
 // TODO: Get I2C for Display working
 // TODO: Get INA calibration working
