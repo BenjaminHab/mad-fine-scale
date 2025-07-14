@@ -111,15 +111,12 @@ fn main() -> ! {
         .I2C1
         .i2c(sda, scl, i2c::Config::with_timing(0x2020_151b), &mut rcc);
 
-    
-
-
     let tx_buf: [u8; 1] = [rheo_read | 0b00];
     let mut rx_buf: [u8; 1] = [0];
 
     // Switch on Instrumentation amplifier and bridge power supply
-    ina_enable.set_high();
-    bridge_enable.set_low();
+    let _ = ina_enable.set_high();
+    let _ = bridge_enable.set_low();
 
     loop {
         //led.toggle().unwrap();
@@ -140,6 +137,8 @@ fn main() -> ! {
             Ok(_) => rprintln!("ok"),
             Err(err) => rprintln!("error: {:?}", err),
         }
+
+        // TODO: Try increment and decrement and read if values have changed
 
         // match i2c.write_read(rheo_addr, &tx_buf, &mut rx_buf) {
         // match i2c.read(rheo_addr, &mut rx_buf) {
