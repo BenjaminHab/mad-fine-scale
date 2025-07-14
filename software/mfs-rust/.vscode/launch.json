@@ -8,6 +8,7 @@
             "type": "probe-rs-debug",
             "request": "launch",
             "name": "probe-rs Test",
+            "preLaunchTask": "rust: cargo build",
             "cwd": "${workspaceFolder}",
             "connectUnderReset": true,
             "chip": "STM32G070CBTx",

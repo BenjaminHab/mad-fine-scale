@@ -4,7 +4,7 @@
 target = "thumbv6m-none-eabi"
 
 #[target.armv6m]
-#runner = 'probe-rs run --chip stm32g070CBTx'
+runner = 'probe-rs run --chip STM32G070CBTx target/thumbv6m-none-eabi/release/mfs-rust'
 
 # use the Tlink.x scrip from the cortex-m-rt crate
 rustflags = [ "-C", "link-arg=-Tlink.x"]
