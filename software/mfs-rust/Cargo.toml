@@ -6,15 +6,25 @@ edition = "2021"
 [profile.release]
 opt-level = 'z' # turn on maximum optimizations. We only have 64kB
 lto = true      # Link-time-optimizations for further size reduction
+debug = 2
+
 
 [dependencies]
-critical-section = "1.0"
-panic-halt = "0.2.0"
-cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
-cortex-m-rt = "0.7.2"
-vcell = "0.1.2"
-rtt-target = "0.5.0"
-stm32g0xx-hal = {version = "0.2.0", features = ["stm32g070", "rt"]}
-panic-semihosting = "0.6.0"
-cortex-m-semihosting = "0.5.0"
-fugit = "0.3.7"
+embassy-stm32 = { version = "0.2.0", path = "/home/benjamin/Projects/learning-rust/embassy/embassy-stm32", features = [ "defmt", "time-driver-any", "stm32g070cb", "memory-x", "unstable-pac", "exti"]  }
+embassy-sync = { version = "0.7.0", path = "/home/benjamin/Projects/learning-rust/embassy/embassy-sync", features = ["defmt"] }
+embassy-executor = { version = "0.7.0", path = "/home/benjamin/Projects/learning-rust/embassy/embassy-executor", features = ["arch-cortex-m", "executor-thread", "defmt"] }
+embassy-time = { version = "0.4.0", path = "/home/benjamin/Projects/learning-rust/embassy/embassy-time", features = ["defmt", "defmt-timestamp-uptime", "tick-hz-32_768"] }
+embassy-usb = { version = "0.4.0", path = "/home/benjamin/Projects/learning-rust/embassy/embassy-usb", default-features = false, features = ["defmt"] }
+embassy-futures = { version = "0.1.0", path = "/home/benjamin/Projects/learning-rust/embassy/embassy-futures" }
+
+defmt = "1.0.1"
+defmt-rtt = "1.0.0"
+
+cortex-m = { version = "0.7.6", features = ["inline-asm", "critical-section-single-core"] }
+cortex-m-rt = "0.7.0"
+embedded-hal = "0.2.6"
+panic-probe = { version = "1.0.0", features = ["print-defmt"] }
+heapless = { version = "0.8", default-features = false }
+portable-atomic = { version = "1.5", features = ["unsafe-assume-single-core"] }
+
+embedded-io-async = { version = "0.6.1" }
