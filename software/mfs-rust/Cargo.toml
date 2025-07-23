@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [profile.release]
-opt-level = 'z' # turn on maximum optimizations. We only have 64kB
-lto = true      # Link-time-optimizations for further size reduction
+#opt-level = 'z' # turn on maximum optimizations. We only have 64kB
+#lto = true      # Link-time-optimizations for further size reduction
 debug = 2
 
 

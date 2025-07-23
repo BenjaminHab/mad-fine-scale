@@ -1,0 +1,10 @@
+Build with 
+cargo build
+
+Flash with
+cargo flash --chip STM32G070CBTx --release
+
+Flash and start rtt terminal
+cargo embed
+
+Move to either embedded-hal(?)/stm32g0(PAC) or embassy_stm32 (or similar)!
