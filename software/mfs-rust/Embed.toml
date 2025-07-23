@@ -1,0 +1,5 @@
+[default.general]
+chip = "STM32G070CBTx"
+
+[default.rtt]
+enabled = true
