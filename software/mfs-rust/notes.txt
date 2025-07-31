@@ -8,3 +8,10 @@ Flash and start rtt terminal
 cargo embed
 
 Move to either embedded-hal(?)/stm32g0(PAC) or embassy_stm32 (or similar)!
+
+Build and flash example: 
+cd examples
+# cargo build --bin blinky --release
+# cargo flash --bin blinky --chip STM32G070CBTx --release
+
+cargo run --bin blinky
