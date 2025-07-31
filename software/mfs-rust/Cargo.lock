@@ -216,7 +216,7 @@ dependencies = [
 
 [[package]]
 name = "embassy-embedded-hal"
-version = "0.3.0"
+version = "0.3.1"
 dependencies = [
  "defmt 1.0.1",
  "embassy-futures",
@@ -374,7 +374,7 @@ dependencies = [
 
 [[package]]
 name = "embassy-usb"
-version = "0.4.0"
+version = "0.5.0"
 dependencies = [
  "defmt 1.0.1",
  "embassy-futures",
@@ -387,7 +387,7 @@ dependencies = [
 
 [[package]]
 name = "embassy-usb-driver"
-version = "0.1.1"
+version = "0.2.0"
 dependencies = [
  "defmt 1.0.1",
  "embedded-io-async",
@@ -395,7 +395,7 @@ dependencies = [
 
 [[package]]
 name = "embassy-usb-synopsys-otg"
-version = "0.2.0"
+version = "0.3.0"
 dependencies = [
  "critical-section",
  "defmt 1.0.1",
@@ -556,17 +556,22 @@ dependencies = [
  "cortex-m-rt",
  "defmt 1.0.1",
  "defmt-rtt",
+ "embassy-embedded-hal",
  "embassy-executor",
  "embassy-futures",
  "embassy-stm32",
  "embassy-sync",
  "embassy-time",
+ "embassy-time-driver",
  "embassy-usb",
  "embedded-hal 0.2.7",
+ "embedded-hal 1.0.0",
+ "embedded-hal-async",
  "embedded-io-async",
  "heapless",
  "panic-probe",
  "portable-atomic",
+ "static_cell",
 ]
 
 [[package]]
@@ -716,6 +721,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
 
 [[package]]
+name = "static_cell"
+version = "2.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0530892bb4fa575ee0da4b86f86c667132a94b74bb72160f58ee5a4afec74c23"
+dependencies = [
+ "portable-atomic",
+]
+
+[[package]]
 name = "stm32-fmc"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -727,10 +741,11 @@ dependencies = [
 [[package]]
 name = "stm32-metapac"
 version = "16.0.0"
-source = "git+https://github.com/embassy-rs/stm32-data-generated?tag=stm32-data-0069be7389d0378d826003304d72a13008f3ebce#93be75cbb3b2ef34b9d61a29c71ac5aa7bb33f2b"
+source = "git+https://github.com/embassy-rs/stm32-data-generated?tag=stm32-data-0cf2bd99dd5ebbaab9574b4fb42c12f358ff2ed8#61d426798e97be37a09dd4bb8bd9eb39ad0ca867"
 dependencies = [
  "cortex-m",
  "cortex-m-rt",
+ "defmt 0.3.100",
 ]
 
 [[package]]
