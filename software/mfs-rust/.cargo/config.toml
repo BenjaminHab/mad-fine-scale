@@ -13,7 +13,7 @@ runner = [
 target = "thumbv6m-none-eabi"
 
 [env]
-DEFMT_LOG = "trace"
+DEFMT_LOG = "info"
 DEFMT_RTT_BUFFER_SIZE = "256"
 
 [profile.release]

@@ -20,7 +20,8 @@
                 {
                     "coreIndex": 0,
                     "programBinary": "./target/thumbv6m-none-eabi/debug/${workspaceFolderBasename}",
-                    "rttEnabled": true
+                    "rttEnabled": true, 
+                    "svdFile": "./STM32G070.svd"
                 }
             ]
         }
