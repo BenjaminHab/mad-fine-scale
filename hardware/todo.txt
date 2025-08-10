@@ -1,0 +1,8 @@
+- input and output filters for INA (copy part of Microchip reference design for MCP6N11: ARD00354)
+- include test points including something for ground to fix an alligator clip (Series resistors for analog pads!)
+- Decouple analog supply voltage (e.g. with LC filter)
+- provide reference voltage tied to supply voltage?
+- Possibly use STM32G071 because it can be fed a voltage reference?
+- Use different resistor for greater gain factors?
+- Read in INA reference voltage as well
+- Embed rheo into resistor network to be able to fine-tune the gain from 200 to 1200 instead of 1 to 1334
