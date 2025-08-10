@@ -1,5 +1,6 @@
-/target/
+target
 **/*.orig
 **/*.rs.bk
+*.pdb
 Cargo.lock
-/.idea/
+.idea/
