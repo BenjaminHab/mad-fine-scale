@@ -1,7 +1,7 @@
 - input and output filters for INA (copy part of Microchip reference design for MCP6N11: ARD00354)
 - include test points including something for ground to fix an alligator clip (Series resistors for analog pads!)
 - Decouple analog supply voltage (e.g. with LC filter)
-- provide reference voltage tied to supply voltage?
+- provide reference voltage tied to 1/2 supply voltage to use INA in linear range! (See ARD00354 buffered voltage reference)
 - Possibly use STM32G071 because it can be fed a voltage reference?
 - Use different resistor for greater gain factors?
 - Read in INA reference voltage as well
