@@ -92,12 +92,12 @@ async fn main(_spawner: Spawner) {
     let mut vrefint = adc.enable_vrefint();
     let vrefint_sample = adc.blocking_read(&mut vrefint);
     info!("ADC reference value is {}", vrefint_sample);
-    let convert_to_millivolts = |sample| {
-        // From stm32g0x0 datasheet: Reference voltage is 3V
-        const VREFINT_MV: u32 = 3000; // mV
+    // let convert_to_millivolts = |sample| {
+    //     // From stm32g0x0 datasheet: Reference voltage is 3V
+    //     const VREFINT_MV: u32 = 3000; // mV
 
-        (u32::from(sample) * VREFINT_MV / u32::from(vrefint_sample)) as u16
-    };
+    //     (u32::from(sample) * VREFINT_MV / u32::from(vrefint_sample)) as u16
+    // };
     // CHECK: Possibly check the VREFBUF config to make sure the internal reference voltage is used
     debug!("ADC setup complete!");
 
@@ -129,9 +129,9 @@ async fn main(_spawner: Spawner) {
     debug!("I2C setup complete!");
 
     debug!("Entering loop!");
-    loop {
+    // loop {
         // for i in 0..12 {
-        let i: u8 = 0;
+        let i: u8 = 120;
         // Read rheo
         match i2c_dev1
             .write_read(rheo_addr, &read_wiper0, &mut rx_buf)
@@ -143,13 +143,22 @@ async fn main(_spawner: Spawner) {
         Timer::after_millis(100).await;
 
         // Write rheo
-        write_wiper0[1] = 10 * i; // set data byte
+        write_wiper0[1] = i; // set data byte
         match i2c_dev1.write(rheo_addr, &write_wiper0).await {
             Ok(_) => debug!("Wrote {:?} to wiper0", &write_wiper0[1]),
             Err(err) => debug!("error: {:?}", err),
         }
+
+        let _ = bridge_enable.set_high();
         Timer::after_millis(100).await;
 
+
+        let _ = ina_enable.set_low();
+        Timer::after_millis(10).await;
+        let _ = ina_enable.set_high();
+        Timer::after_millis(100).await;
+        let _ = bridge_enable.set_low();
+        loop {
         // // increment wiper0 5 times
         // for i in 0..5 {
         //     match i2c.write(rheo_addr, &increment_wiper0).await {
@@ -172,44 +181,46 @@ async fn main(_spawner: Spawner) {
         // Gain factor = 1 + 100k/R_rheo; R_rheo is R_wiper (75R) + N/128 * 10k, N in 0..128
         // Gain should then be in 11..1334
         let mut v = adc.blocking_read(&mut pin);
-        info!("Library reading: {}", v);
+        // info!("{}", v);
 
-        led.toggle();
-        Timer::after_millis(100).await;
+        // led.toggle();
+        // Timer::after_millis(100).await;
 
-        // Autoscale reading
-        while v < 3000 {
-            match i2c_dev1.write(rheo_addr, &decrement_wiper0).await {
-                Ok(_) => debug!("Decremented wiper0"),
-                Err(err) => debug!("error: {:?}", err),
-            }
-            Timer::after_millis(100).await;
+        // // Autoscale reading
+        // while v < 3000 {
+        //     match i2c_dev1.write(rheo_addr, &decrement_wiper0).await {
+        //         Ok(_) => debug!("Decremented wiper0"),
+        //         Err(err) => debug!("error: {:?}", err),
+        //     }
+        //     Timer::after_millis(100).await;
 
-            v = adc.blocking_read(&mut pin);
-            info!("--> {} - {} mV", v, convert_to_millivolts(v));
-        }
+        //     v = adc.blocking_read(&mut pin);
+        //     info!("--> {} - {} mV", v, convert_to_millivolts(v));
+        // }
 
-        while v > 50000 {
-            match i2c_dev1.write(rheo_addr, &increment_wiper0).await {
-                Ok(_) => debug!("Incremented wiper0"),
-                Err(err) => debug!("error: {:?}", err),
-            }
-            Timer::after_millis(100).await;
+        // while v > 50000 {
+        //     match i2c_dev1.write(rheo_addr, &increment_wiper0).await {
+        //         Ok(_) => debug!("Incremented wiper0"),
+        //         Err(err) => debug!("error: {:?}", err),
+        //     }
+        //     Timer::after_millis(100).await;
 
-            v = adc.blocking_read(&mut pin);
-            info!("--> {} - {} mV", v, convert_to_millivolts(v));
-        }
+        //     v = adc.blocking_read(&mut pin);
+        //     info!("--> {} - {} mV", v, convert_to_millivolts(v));
+        // }
 
         match get_gain(i2c_bus).await {
             Ok(gain) => {
                 // let reading = convert_to_millivolts(v);
 
-                info!("{} / {} = {}", v, gain, (v as f32) / gain);
+                info!("{}, {}", v, gain);
             }
             Err(_) => {}
         }
 
-        Timer::after_millis(500).await;
+
+        Timer::after_millis(5).await;
+
 
         // }
     }
