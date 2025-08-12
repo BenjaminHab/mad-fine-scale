@@ -1,8 +1,12 @@
-- input and output filters for INA (copy part of Microchip reference design for MCP6N11: ARD00354)
+- input and output filters for INA (copy part of Microchip reference design for MCP6N11: ARD00354);
+    alternative: active filter from Art of Electronics for steeper cutoff!
+    Is it possible to integrate the active filter into the INA feedback to use fewer components?
+    -> Maybe use different filters and read the results pre/post filter in at different ADC pins?
 - include test points including something for ground to fix an alligator clip (Series resistors for analog pads!)
 - Decouple analog supply voltage (e.g. with LC filter)
 - provide reference voltage tied to 1/2 supply voltage to use INA in linear range! (See ARD00354 buffered voltage reference)
 - Possibly use STM32G071 because it can be fed a voltage reference?
-- Use different resistor for greater gain factors?
-- Read in INA reference voltage as well
-- Embed rheo into resistor network to be able to fine-tune the gain from 200 to 1200 instead of 1 to 1334
+- Read in INA reference voltage as well, use it for compensation in code (cf. INA reference design)
+- Embed rheo into resistor network to be able to fine-tune the gain from ~200 to ~1200 instead of 1 to 1334
+- Can a SPICE simulation predict noise?
+- Is it possible to eliminate inconsistencies between gains somehow? Does the reference voltage reading help in this regard?
