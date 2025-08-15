@@ -30,10 +30,10 @@ bind_interrupts!(struct Irqs {
 });
 
 const rheo_addr: u8 = 0b0101111;
-const rheo_read: u8 = 0b1100;
-const rheo_write: u8 = 0b0000;
-const rheo_increment: u8 = 0b0100;
-const rheo_decrement: u8 = 0b1000;
+const rheo_read: u8 = 0b11;
+const rheo_write: u8 = 0b00;
+const rheo_increment: u8 = 0b01;
+const rheo_decrement: u8 = 0b10;
 const rheo_volatile_wiper0_addr: u8 = 0x00;
 const rheo_nonvolatile_wiper0_addr: u8 = 0x02;
 const read_wiper0: [u8; 1] = [rheo_volatile_wiper0_addr << 4 | rheo_read << 2]; //
