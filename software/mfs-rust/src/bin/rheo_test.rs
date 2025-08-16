@@ -25,6 +25,8 @@ use static_cell::StaticCell;
 
 use embassy_stm32::pac::flash::Flash; // Maybe this allows for reading the VRefint factory calibration values at 0x1FFF 75AA - 0x1FFF 75AB
 
+use mfs_rust::rheo::Rheo;
+
 bind_interrupts!(struct Irqs {
     I2C1 => i2c::EventInterruptHandler<peripherals::I2C1>, i2c::ErrorInterruptHandler<peripherals::I2C1>;
 });
@@ -124,13 +126,12 @@ async fn main(_spawner: Spawner) {
     let i2c_bus = I2C_BUS.init(mutex::Mutex::new(i2c));
     let mut i2c_dev1 = I2cDevice::new(i2c_bus);
 
-    let mut write_wiper0: [u8; 2] = [rheo_volatile_wiper0_addr << 4 | rheo_write << 2, 0x00];
-    let mut rx_buf: [u8; 2] = [0x00, 0x00];
+    let rheo = Rheo::new(i2c_bus);
+
     debug!("I2C setup complete!");
 
     let _ = bridge_enable.set_high();
     Timer::after_millis(100).await;
-
 
     let _ = ina_enable.set_low();
     Timer::after_millis(10).await;
@@ -139,111 +140,85 @@ async fn main(_spawner: Spawner) {
     let _ = bridge_enable.set_low();
     debug!("Enabled bridge and INA!");
 
-
     debug!("Entering loop!");
     loop {
         for i in 0..20 {
-        // let i: u8 = 0;
-        // Read rheo
-        // match i2c_dev1
-        //     .write_read(rheo_addr, &read_wiper0, &mut rx_buf)
-        //     .await
-        // {
-        //     Ok(_) => debug!("Read {:?} from wiper0", rx_buf[1]),
-        //     Err(err) => debug!("error: {:?}", err),
-        // }
-        // Timer::after_millis(100).await;
+            // let i: u8 = 0;
+            // Read rheo
+            // match i2c_dev1
+            //     .write_read(rheo_addr, &read_wiper0, &mut rx_buf)
+            //     .await
+            // {
+            //     Ok(_) => debug!("Read {:?} from wiper0", rx_buf[1]),
+            //     Err(err) => debug!("error: {:?}", err),
+            // }
+            // Timer::after_millis(100).await;
 
-        // Write rheo
-        write_wiper0[1] = i; // set data byte
-        match i2c_dev1.write(rheo_addr, &write_wiper0).await {
-            Ok(_) => debug!("Wrote {:?} to wiper0", &write_wiper0[1]),
-            Err(err) => debug!("error: {:?}", err),
-        }
+            // Write rheo
+            _ = rheo.write(1).await;
 
-
-        // loop {
-        // increment wiper0 5 times
-        // for i in 0..5 {
+            // loop {
+            // increment wiper0 5 times
+            // for i in 0..5 {
             // match i2c_dev1.write(rheo_addr, &increment_wiper0).await {
             //     Ok(_) => debug!("Incremented wiper0"),
             //     Err(err) => debug!("error: {:?}", err),
             // }
             // Timer::after_millis(10).await;
-        // }
+            // }
 
-        // Timer::after_millis(100).await;
+            // Timer::after_millis(100).await;
 
-        // read wiper0
-        // match i2c_dev1.write_read(rheo_addr, &read_wiper0, &mut rx_buf).await {
-        //     Ok(_) => debug!("Read {:?} from wiper0", rx_buf[1]),
-        //     Err(err) => debug!("error: {:?}", err),
-        // }
-        Timer::after_millis(10).await;
+            // read wiper0
+            // match i2c_dev1.write_read(rheo_addr, &read_wiper0, &mut rx_buf).await {
+            //     Ok(_) => debug!("Read {:?} from wiper0", rx_buf[1]),
+            //     Err(err) => debug!("error: {:?}", err),
+            // }
+            Timer::after_millis(100).await;
 
-        // Read ADC value
-        // Gain factor = 1 + 100k/R_rheo; R_rheo is R_wiper (75R) + N/128 * 10k, N in 0..128
-        // Gain should then be in 11..1334
-        let mut v = adc.blocking_read(&mut pin);
-        // info!("{}", v);
+            // Read ADC value
+            // Gain factor = 1 + 100k/R_rheo; R_rheo is R_wiper (75R) + N/128 * 10k, N in 0..128
+            // Gain should then be in 11..1334
+            let mut v = adc.blocking_read(&mut pin);
+            // info!("{}", v);
 
-        // led.toggle();
-        // Timer::after_millis(100).await;
+            // led.toggle();
+            // Timer::after_millis(100).await;
 
-        // // Autoscale reading
-        // while v < 3000 {
-        //     match i2c_dev1.write(rheo_addr, &decrement_wiper0).await {
-        //         Ok(_) => debug!("Decremented wiper0"),
-        //         Err(err) => debug!("error: {:?}", err),
-        //     }
-        //     Timer::after_millis(100).await;
+            // Autoscale reading
+            while v < 8000 {
+                _ = rheo.decrement().await;
+                // Timer::after_millis(100).await;
 
-        //     v = adc.blocking_read(&mut pin);
-        //     info!("--> {} - {} mV", v, convert_to_millivolts(v));
-        // }
-
-        // while v > 50000 {
-        //     match i2c_dev1.write(rheo_addr, &increment_wiper0).await {
-        //         Ok(_) => debug!("Incremented wiper0"),
-        //         Err(err) => debug!("error: {:?}", err),
-        //     }
-        //     Timer::after_millis(100).await;
-
-        //     v = adc.blocking_read(&mut pin);
-        //     info!("--> {} - {} mV", v, convert_to_millivolts(v));
-        // }
-
-        match get_gain(i2c_bus).await {
-            Ok(gain) => {
-                // let reading = convert_to_millivolts(v);
-
-                info!("{}, {}", v, gain);
+                v = adc.blocking_read(&mut pin);
+                match rheo.get_gain().await {
+                    Ok(gain) => {
+                        // let reading = convert_to_millivolts(v);
+    
+                        info!("{}, {}", v, gain);
+                    }
+                    Err(_) => {}
+                }
             }
-            Err(_) => {}
-        }
+
+            while v > 50000 {
+                _ = rheo.increment().await;
+                // Timer::after_millis(100).await;
+
+                v = adc.blocking_read(&mut pin);
+                match rheo.get_gain().await {
+                    Ok(gain) => {
+                        // let reading = convert_to_millivolts(v);
+    
+                        info!("{}, {}", v, gain);
+                    }
+                    Err(_) => {}
+                }
+            }
 
 
-        // Timer::after_millis(5).await;
 
-
-        }
-    }
-}
-
-async fn get_gain(i2c_bus: &'static I2cBus) -> Result<f32, ()> {
-    let mut data = [0u8; 2];
-    let mut i2c_dev = I2cDevice::new(i2c_bus);
-    // FIXME: Apparently, in this function the read always returns 0, even if the logic analyzer shows that is not what is sent on the bus
-    match i2c_dev.write_read(rheo_addr, &read_wiper0, &mut data).await {
-        Ok(_) => {
-            let gain: f32 = 1.0f32 + 100.0e3f32 / (75.0f32 + 1e4f32*((data[1] as f32) / 128.0f32));
-            debug!("Read {:?} {:?} from wiper0", data[0], data[1]);
-            debug!("Calculated a gain of {}", gain);
-            Ok(gain)
-        }
-        Err(err) => {
-            error!("{:?}: Could not read gain factor from rheo!", err);
-            Err(())
+            // Timer::after_millis(5).await;
         }
     }
 }
