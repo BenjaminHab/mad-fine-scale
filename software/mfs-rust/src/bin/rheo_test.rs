@@ -128,19 +128,31 @@ async fn main(_spawner: Spawner) {
     let mut rx_buf: [u8; 2] = [0x00, 0x00];
     debug!("I2C setup complete!");
 
+    let _ = bridge_enable.set_high();
+    Timer::after_millis(100).await;
+
+
+    let _ = ina_enable.set_low();
+    Timer::after_millis(10).await;
+    let _ = ina_enable.set_high();
+    Timer::after_millis(100).await;
+    let _ = bridge_enable.set_low();
+    debug!("Enabled bridge and INA!");
+
+
     debug!("Entering loop!");
-    // loop {
-        // for i in 0..12 {
-        let i: u8 = 120;
+    loop {
+        for i in 0..20 {
+        // let i: u8 = 0;
         // Read rheo
-        match i2c_dev1
-            .write_read(rheo_addr, &read_wiper0, &mut rx_buf)
-            .await
-        {
-            Ok(_) => debug!("Read {:?} from wiper0", rx_buf[1]),
-            Err(err) => debug!("error: {:?}", err),
-        }
-        Timer::after_millis(100).await;
+        // match i2c_dev1
+        //     .write_read(rheo_addr, &read_wiper0, &mut rx_buf)
+        //     .await
+        // {
+        //     Ok(_) => debug!("Read {:?} from wiper0", rx_buf[1]),
+        //     Err(err) => debug!("error: {:?}", err),
+        // }
+        // Timer::after_millis(100).await;
 
         // Write rheo
         write_wiper0[1] = i; // set data byte
@@ -149,33 +161,25 @@ async fn main(_spawner: Spawner) {
             Err(err) => debug!("error: {:?}", err),
         }
 
-        let _ = bridge_enable.set_high();
-        Timer::after_millis(100).await;
 
-
-        let _ = ina_enable.set_low();
-        Timer::after_millis(10).await;
-        let _ = ina_enable.set_high();
-        Timer::after_millis(100).await;
-        let _ = bridge_enable.set_low();
-        loop {
+        // loop {
         // increment wiper0 5 times
-        for i in 0..5 {
-            match i2c_dev1.write(rheo_addr, &increment_wiper0).await {
-                Ok(_) => debug!("Incremented wiper0"),
-                Err(err) => debug!("error: {:?}", err),
-            }
-            Timer::after_millis(10).await;
-        }
+        // for i in 0..5 {
+            // match i2c_dev1.write(rheo_addr, &increment_wiper0).await {
+            //     Ok(_) => debug!("Incremented wiper0"),
+            //     Err(err) => debug!("error: {:?}", err),
+            // }
+            // Timer::after_millis(10).await;
+        // }
 
         // Timer::after_millis(100).await;
 
         // read wiper0
-        match i2c_dev1.write_read(rheo_addr, &read_wiper0, &mut rx_buf).await {
-            Ok(_) => debug!("Read {:?} from wiper0", rx_buf[1]),
-            Err(err) => debug!("error: {:?}", err),
-        }
-        Timer::after_millis(100).await;
+        // match i2c_dev1.write_read(rheo_addr, &read_wiper0, &mut rx_buf).await {
+        //     Ok(_) => debug!("Read {:?} from wiper0", rx_buf[1]),
+        //     Err(err) => debug!("error: {:?}", err),
+        // }
+        Timer::after_millis(10).await;
 
         // Read ADC value
         // Gain factor = 1 + 100k/R_rheo; R_rheo is R_wiper (75R) + N/128 * 10k, N in 0..128
@@ -219,10 +223,10 @@ async fn main(_spawner: Spawner) {
         }
 
 
-        Timer::after_millis(5).await;
+        // Timer::after_millis(5).await;
 
 
-        // }
+        }
     }
 }
 
@@ -232,7 +236,7 @@ async fn get_gain(i2c_bus: &'static I2cBus) -> Result<f32, ()> {
     // FIXME: Apparently, in this function the read always returns 0, even if the logic analyzer shows that is not what is sent on the bus
     match i2c_dev.write_read(rheo_addr, &read_wiper0, &mut data).await {
         Ok(_) => {
-            let gain: f32 = 1.0f32 + (100.0e3f32 / (75.0f32 + (data[1] as f32) / 128.0f32));
+            let gain: f32 = 1.0f32 + 100.0e3f32 / (75.0f32 + 1e4f32*((data[1] as f32) / 128.0f32));
             debug!("Read {:?} {:?} from wiper0", data[0], data[1]);
             debug!("Calculated a gain of {}", gain);
             Ok(gain)

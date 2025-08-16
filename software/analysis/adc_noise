@@ -20,16 +20,10 @@ data = CSV.read("g0.csv", DataFrame; header=false, skipto=8)
 rename!(data, [:Column1 => :time, :Column2 => :reading, :Column3 => :gain])
 
 # ╔═╡ 733d644a-71d7-41e4-ba7b-6147813f3477
-# ╠═╡ disabled = true
-#=╠═╡
 data[!, :val] = data[:, :reading] ./ data[:, :gain]
-  ╠═╡ =#
 
 # ╔═╡ 3c5cdd79-688a-424a-9388-65f3b53c255c
-# ╠═╡ disabled = true
-#=╠═╡
 data[!, :med] = running_median(data[:, :val], 9)
-  ╠═╡ =#
 
 # ╔═╡ c42a7903-653d-441e-947c-e189a0533157
 begin
@@ -40,8 +34,6 @@ begin
 end
 
 # ╔═╡ e7e3e394-2761-43bd-a57f-1b97648564a2
-# ╠═╡ disabled = true
-#=╠═╡
 begin
 	fig2 = Figure()
 	ax2 = Axis(fig2[1, 1], yautolimitmargin = (0.1, 0.1), xautolimitmargin = (0.1, 0.1))
@@ -49,7 +41,6 @@ begin
 	lines!(ax2, data[:,:time], data[:,:med])
 	fig2
 end
-  ╠═╡ =#
 
 # ╔═╡ a0e99f4f-f5cc-4df1-b59e-d977c5409386
 data

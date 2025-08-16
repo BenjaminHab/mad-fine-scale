@@ -232,7 +232,7 @@ async fn get_gain(i2c_bus: &'static I2cBus) -> Result<f32, ()> {
     // FIXME: is it possible to get the write / read functions as async functions? Maybe that is the difference between blocking and non-blocking?
     match i2c_dev.write_read(rheo_addr, &read_wiper0, &mut data).await {
         Ok(_) => {
-            let gain: f32 = 1.0f32 + (100.0e3f32 / (75.0f32 + (data[1] as f32) / 128.0f32));
+            let gain: f32 = 1.0f32 + 100.0e3f32 / (75.0f32 + 1e4f32*((data[1] as f32) / 128.0f32));
             debug!("Calculated a gain of {}", gain);
             Ok(gain)
         }
