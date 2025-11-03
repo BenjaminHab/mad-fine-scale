@@ -1265,16 +1265,6 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 101.6) (xy 119.38 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "236abd94-ca4b-4de5-b9d5-d2064fe88583")
-	)
-	(wire
-		(pts
 			(xy 151.13 130.81) (xy 151.13 146.05)
 		)
 		(stroke
@@ -1302,6 +1292,16 @@
 			(type default)
 		)
 		(uuid "2c997637-099a-42bf-8e2d-2a3ede23c684")
+	)
+	(bus
+		(pts
+			(xy 99.06 119.38) (xy 119.38 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f513d3e-9e2c-41ff-bfe1-89a65af4fbde")
 	)
 	(wire
 		(pts
@@ -1335,6 +1335,16 @@
 	)
 	(wire
 		(pts
+			(xy 139.7 68.58) (xy 139.7 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53d0cbb5-2d40-42d8-8f51-1ba08db0d430")
+	)
+	(wire
+		(pts
 			(xy 113.03 137.16) (xy 175.26 137.16)
 		)
 		(stroke
@@ -1365,13 +1375,23 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 109.22) (xy 113.03 109.22)
+			(xy 99.06 124.46) (xy 113.03 124.46)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "621c7159-7c5b-4a42-86e7-de93c8278781")
+	)
+	(wire
+		(pts
+			(xy 99.06 106.68) (xy 119.38 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6621b115-6562-4fea-a090-0bfe0bc245e3")
 	)
 	(wire
 		(pts
@@ -1455,6 +1475,26 @@
 	)
 	(wire
 		(pts
+			(xy 99.06 111.76) (xy 119.38 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99c0c993-6f3a-457e-9284-81b1343237d1")
+	)
+	(wire
+		(pts
+			(xy 99.06 109.22) (xy 119.38 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9cf78eef-da54-484a-abd4-a8735fbcb970")
+	)
+	(wire
+		(pts
 			(xy 129.54 130.81) (xy 129.54 146.05)
 		)
 		(stroke
@@ -1495,7 +1535,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 109.22) (xy 113.03 137.16)
+			(xy 113.03 124.46) (xy 113.03 137.16)
 		)
 		(stroke
 			(width 0)
@@ -1615,7 +1655,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 106.68) (xy 115.57 134.62)
+			(xy 115.57 121.92) (xy 115.57 134.62)
 		)
 		(stroke
 			(width 0)
@@ -1625,7 +1665,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 106.68) (xy 115.57 106.68)
+			(xy 99.06 121.92) (xy 115.57 121.92)
 		)
 		(stroke
 			(width 0)
@@ -2325,9 +2365,9 @@
 				(justify left)
 			)
 		)
-		(pin "LDO_ENABLE" input
-			(at 140.97 68.58 270)
-			(uuid "05de80b2-02d2-44e9-8701-02207a9ed24c")
+		(pin "LDO_EN" input
+			(at 139.7 68.58 270)
+			(uuid "7c28bb42-4959-4b34-8707-e95f30b7fcc3")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2345,7 +2385,7 @@
 	)
 	(sheet
 		(at 69.85 93.98)
-		(size 29.21 19.05)
+		(size 29.21 36.83)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2369,22 +2409,12 @@
 			)
 		)
 		(property "Sheetfile" "instrumentation_amplifier.kicad_sch"
-			(at 69.85 113.6146 0)
+			(at 69.85 131.3946 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
-			)
-		)
-		(pin "INA_OUT" output
-			(at 99.06 101.6 0)
-			(uuid "5e356342-45bd-4284-9b75-c9dd2c46237d")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 		(pin "INA_ENABLE" input
@@ -2428,7 +2458,7 @@
 			)
 		)
 		(pin "I2C_SCL" input
-			(at 99.06 106.68 0)
+			(at 99.06 121.92 0)
 			(uuid "363879b9-9c9b-405a-9e5f-efb5101a2a0f")
 			(effects
 				(font
@@ -2438,7 +2468,7 @@
 			)
 		)
 		(pin "I2C_SDA" bidirectional
-			(at 99.06 109.22 0)
+			(at 99.06 124.46 0)
 			(uuid "4f49c047-5157-4349-a8c0-8310b6c58e61")
 			(effects
 				(font
@@ -2447,9 +2477,49 @@
 				(justify right)
 			)
 		)
-		(pin "VREF" output
+		(pin "SPI" bidirectional
+			(at 99.06 119.38 0)
+			(uuid "871715d6-709a-4fd9-a293-e21054711574")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "INA_OUT_FILTERED_ACTIVE" output
+			(at 99.06 106.68 0)
+			(uuid "cd158cc1-b223-4447-835b-497248577a7e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "INA_OUT_FILTERED_PASSIVE" output
+			(at 99.06 109.22 0)
+			(uuid "d51f2c6f-dac6-4046-ba3d-06d10015a455")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "INA_OUT_UNFILTERED" output
+			(at 99.06 111.76 0)
+			(uuid "f7b32adb-f93e-4800-b0cf-79a167374a01")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "INA_VREF" output
 			(at 99.06 104.14 0)
-			(uuid "41825623-f3f2-445c-833a-f479a3eaaefd")
+			(uuid "da3bc937-adf8-426e-8d74-057ca5c93e88")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2507,16 +2577,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-		(pin "INA_OUT" input
-			(at 119.38 101.6 180)
-			(uuid "3bcb7107-420f-40eb-a690-48abe1abaa99")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "DISPLAY_ENABLE" output
@@ -2709,16 +2769,6 @@
 				(justify left)
 			)
 		)
-		(pin "VREF" input
-			(at 119.38 104.14 180)
-			(uuid "7f672d6b-f0d3-4ac0-811e-3b23ccbf3de3")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "GPIO_PB8" bidirectional
 			(at 121.92 130.81 270)
 			(uuid "a9256a33-af5f-49d6-9af4-15903a92f9ab")
@@ -2727,6 +2777,66 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(pin "SPI" bidirectional
+			(at 119.38 119.38 180)
+			(uuid "be909091-e4a9-48be-b87b-bf87568e0c8a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "INA_OUT_FILTERED_ACTIVE" output
+			(at 119.38 106.68 180)
+			(uuid "45432c52-7b95-4bde-801e-46893c7855f5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "INA_OUT_FILTERED_PASSIVE" output
+			(at 119.38 109.22 180)
+			(uuid "52cd03a5-d3ac-44dc-937f-32ea9500c1a9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "INA_OUT_UNFILTERED" output
+			(at 119.38 111.76 180)
+			(uuid "54f9294d-80ad-4a55-94bd-86f32c230f08")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "INA_VREF" output
+			(at 119.38 104.14 180)
+			(uuid "f7e4a88e-4ec8-40e4-ab95-b0b6feac3aad")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "LDO_EN" input
+			(at 139.7 80.01 90)
+			(uuid "a8e0cc9c-baa3-4824-b684-ecfe1b3feed0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
