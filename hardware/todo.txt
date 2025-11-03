@@ -14,8 +14,11 @@ v Read in INA reference voltage as well, use it for compensation in code (cf. IN
 - Can a SPICE simulation predict noise?
 - Is it possible to eliminate inconsistencies between gains somehow? Does the reference voltage reading help in this regard?
 - Can either the voltage regulator or the battery output be switched off, so the stm32 alone is running via vbat pin (tolerance 4V)? -> reduce power consumption in standby, use fewer mosfets; Problem: BMS switches low side of battery. NB: VBAT ADC channel reads 1/3 of actual battery voltage (Datasheet) or 1/2 (reference manual)
-- test BMS and check reference design
-- check LDO datasheet
+- test BMS and check reference design; what happens when charging via USB? Does VUSB = 5V fry the MCU, if no battery ist present?
+- Does the BMS allow for simulatneous charging and usage of
+- check LDO datasheet -> remove MOSFETs for bridge and display, possibly tie INA_EN to 3V3 if enabling LDO should be possible
 - 18650 holder integration?
+- Check ADC Reference Design
+
 
 

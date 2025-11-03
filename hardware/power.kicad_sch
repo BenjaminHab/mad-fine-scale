@@ -713,7 +713,7 @@
 				)
 				(arc
 					(start -7.62 3.81)
-					(mid -6.985 4.4422)
+					(mid -6.985 4.4423)
 					(end -6.35 3.81)
 					(stroke
 						(width 0.254)
@@ -725,7 +725,7 @@
 				)
 				(arc
 					(start -7.62 3.81)
-					(mid -6.985 4.4422)
+					(mid -6.985 4.4423)
 					(end -6.35 3.81)
 					(stroke
 						(width 0.254)
@@ -737,7 +737,7 @@
 				)
 				(arc
 					(start -8.89 3.81)
-					(mid -6.985 5.7066)
+					(mid -6.985 5.7067)
 					(end -5.08 3.81)
 					(stroke
 						(width 0.508)
@@ -749,7 +749,7 @@
 				)
 				(arc
 					(start -5.08 -3.81)
-					(mid -6.985 -5.7066)
+					(mid -6.985 -5.7067)
 					(end -8.89 -3.81)
 					(stroke
 						(width 0.508)
@@ -761,7 +761,7 @@
 				)
 				(arc
 					(start -6.35 -3.81)
-					(mid -6.985 -4.4422)
+					(mid -6.985 -4.4423)
 					(end -7.62 -3.81)
 					(stroke
 						(width 0.254)
@@ -773,7 +773,7 @@
 				)
 				(arc
 					(start -6.35 -3.81)
-					(mid -6.985 -4.4422)
+					(mid -6.985 -4.4423)
 					(end -7.62 -3.81)
 					(stroke
 						(width 0.254)
@@ -1415,8 +1415,8 @@
 					)
 				)
 				(rectangle
-					(start -1.5748 1.1938)
-					(end 1.4732 0.6858)
+					(start -1.524 1.016)
+					(end 1.524 0.508)
 					(stroke
 						(width 0)
 						(type default)
@@ -1451,7 +1451,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0.508 3.429) (xy 1.524 3.429)
+						(xy 0.762 3.048) (xy 1.778 3.048)
 					)
 					(stroke
 						(width 0.254)
@@ -1463,7 +1463,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.016 3.937) (xy 1.016 2.921)
+						(xy 1.27 3.556) (xy 1.27 2.54)
 					)
 					(stroke
 						(width 0.254)
@@ -1967,21 +1967,19 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "R"
-				(at 0.762 0.508 0)
+				(at 0 0 90)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(size 1.016 1.016)
 					)
-					(justify left)
 				)
 			)
 			(property "Value" "R_Small"
-				(at 0.762 -1.016 0)
+				(at 1.778 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" ""
@@ -2294,7 +2292,7 @@
 				)
 			)
 			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMG2301L.pdf"
-				(at 0 0 0)
+				(at 5.08 -3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2592,7 +2590,7 @@
 				)
 			)
 			(property "Datasheet" "http://www.gneic.com/product/datasheet/FDG6335N-1122853.pdf"
-				(at 0 0 0)
+				(at 5.08 -3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2911,8 +2909,12 @@
 		)
 		(symbol "power:+3.3V"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2961,7 +2963,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "power-flag"
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3012,8 +3014,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(hide yes)
-					(name "+3V3"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3158,8 +3159,12 @@
 		)
 		(symbol "power:+BATT"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3208,7 +3213,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "power-flag battery"
+			(property "ki_keywords" "global power battery"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3259,8 +3264,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(hide yes)
-					(name "+BATT"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3280,8 +3284,12 @@
 		)
 		(symbol "power:-BATT"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3330,7 +3338,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "power-flag battery"
+			(property "ki_keywords" "global power battery"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3369,8 +3377,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(hide yes)
-					(name "-BATT"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3390,8 +3397,12 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3440,7 +3451,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "power-flag"
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3467,8 +3478,7 @@
 				(pin power_in line
 					(at 0 0 270)
 					(length 0)
-					(hide yes)
-					(name "GND"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3488,8 +3498,12 @@
 		)
 		(symbol "power:VDD"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3504,7 +3518,7 @@
 				)
 			)
 			(property "Value" "VDD"
-				(at 0 3.81 0)
+				(at 0 3.556 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3538,7 +3552,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "power-flag"
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3589,8 +3603,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(hide yes)
-					(name "VDD"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3620,12 +3633,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3671b1f1-96bb-4862-bec5-f79fe3566df0")
-	)
-	(junction
-		(at 201.93 48.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "392ac699-f755-4bf9-8c9d-5cbd100b4cdb")
 	)
 	(junction
 		(at 110.49 21.59)
@@ -3674,6 +3681,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c2856e0a-5a9f-4fa8-91b4-eb0a3299072c")
+	)
+	(junction
+		(at 201.93 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "df7b78fc-88c2-4daa-9cac-d02cf1e797b3")
 	)
 	(junction
 		(at 102.87 21.59)
@@ -3932,6 +3945,16 @@
 			(type default)
 		)
 		(uuid "23df0fd0-cfe2-45f4-bb44-41328e6b760a")
+	)
+	(wire
+		(pts
+			(xy 199.39 53.34) (xy 201.93 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24919556-e6c2-4b57-831b-7f7bf09423a8")
 	)
 	(wire
 		(pts
@@ -4275,6 +4298,16 @@
 	)
 	(wire
 		(pts
+			(xy 201.93 60.96) (xy 201.93 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca120a13-668e-46e7-b60f-09cbb73ee4d0")
+	)
+	(wire
+		(pts
 			(xy 119.38 109.22) (xy 119.38 106.68)
 		)
 		(stroke
@@ -4342,6 +4375,16 @@
 			(type default)
 		)
 		(uuid "dafb882a-7604-4f8e-b753-a3b6dca4dc71")
+	)
+	(wire
+		(pts
+			(xy 201.93 53.34) (xy 201.93 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd11fc45-3408-4b7c-9bdc-fc0f725c4700")
 	)
 	(wire
 		(pts
@@ -4448,7 +4491,7 @@
 	)
 	(hierarchical_label "LDO_EN"
 		(shape input)
-		(at 193.04 54.61 180)
+		(at 199.39 53.34 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4514,12 +4557,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Li+ Battery Protection IC for Single Cell Pack, SOT-23-5"
 			(at 128.27 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "AP9101CK-AHTRG1"
@@ -4601,12 +4645,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 237.49 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -4667,12 +4712,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 109.22 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -4735,12 +4781,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 119.38 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -4868,12 +4915,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 266.7 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5002,12 +5050,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"VDD\""
 			(at 229.87 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5024,7 +5073,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 201.93 50.8 0)
+		(at 201.93 58.42 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5033,7 +5082,7 @@
 		(fields_autoplaced yes)
 		(uuid "2aa4f51d-f26a-466f-9e71-f23b432813d5")
 		(property "Reference" "R15"
-			(at 203.4286 49.9653 0)
+			(at 203.4286 57.5853 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5042,7 +5091,7 @@
 			)
 		)
 		(property "Value" "100K"
-			(at 203.4286 52.5022 0)
+			(at 203.4286 60.1222 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5051,7 +5100,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 201.93 50.8 0)
+			(at 201.93 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5060,7 +5109,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 201.93 50.8 0)
+			(at 201.93 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5068,12 +5117,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 201.93 50.8 0)
+		(property "Description" "Resistor, small symbol"
+			(at 201.93 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5136,12 +5186,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 214.63 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5473,12 +5524,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 269.24 19.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5541,12 +5593,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 227.33 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5605,12 +5658,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 269.24 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5672,12 +5726,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 232.41 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5806,12 +5861,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 104.14 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5874,12 +5930,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+BATT\""
 			(at 97.79 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -5934,7 +5991,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMG2307L.pdf"
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMG2301L.pdf"
 			(at 116.84 119.38 0)
 			(effects
 				(font
@@ -5944,12 +6001,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "-3A Id, -20V Vds, P-Channel MOSFET, SOT-23"
 			(at 116.84 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6038,6 +6096,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 201.93 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6bbbb5a8-7796-4c0a-990c-719104f92be7")
+		(property "Reference" "#PWR029"
+			(at 201.93 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 201.93 67.9434 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 201.93 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 201.93 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 201.93 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e293e0a7-1079-456d-8430-992e39bfb977")
+		)
+		(instances
+			(project "Scale"
+				(path "/adf38c8f-bada-4838-acc6-e6af19946742/8a4812e6-01d2-4a59-bc73-706ba54f858f"
+					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 115.57 26.67 180)
 		(unit 1)
@@ -6083,12 +6207,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 115.57 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6218,12 +6343,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 152.4 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6349,12 +6475,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 115.57 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6413,12 +6540,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 269.24 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6481,12 +6609,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 204.47 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6546,12 +6675,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 227.33 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6610,12 +6740,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 106.68 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6679,12 +6810,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 110.49 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -6815,12 +6947,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "0.7A Id, 20V Vds, Dual N-Channel MOSFET, 300mOhm Ron, SC-70-6"
 			(at 125.73 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "BSD235N"
@@ -6903,12 +7036,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "300mA Low-dropout Voltage Regulator, Vout 3.3V, Vin up to 5.5V, SOT-23"
 			(at 214.63 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "MIC5504-3.3YM5-TR "
@@ -6990,12 +7124,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"VDD\""
 			(at 266.7 19.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7055,12 +7190,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"-BATT\""
 			(at 97.79 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7119,12 +7255,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 104.14 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7182,7 +7319,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMG2307L.pdf"
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/DMG2301L.pdf"
 			(at 116.84 80.01 0)
 			(effects
 				(font
@@ -7192,12 +7329,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "-3A Id, -20V Vds, P-Channel MOSFET, SOT-23"
 			(at 116.84 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7262,12 +7400,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "USB Full-Featured Type-C Receptacle connector"
 			(at 212.09 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "MPN" "12401610E4#2A"
@@ -7409,12 +7548,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Single-cell battery"
 			(at 97.79 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7478,12 +7618,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 			(at 266.7 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7543,12 +7684,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"VDD\""
 			(at 102.87 17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7608,12 +7750,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"VDD\""
 			(at 201.93 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7674,12 +7817,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"-BATT\""
 			(at 266.7 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7742,12 +7886,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "0.7A Id, 20V Vds, Dual N-Channel MOSFET, 300mOhm Ron, SC-70-6"
 			(at 143.51 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7823,12 +7968,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 109.22 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7891,12 +8037,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 240.03 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"

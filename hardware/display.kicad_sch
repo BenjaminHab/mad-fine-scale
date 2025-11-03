@@ -248,8 +248,12 @@
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -298,7 +302,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "power-flag"
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(effects
 					(font
@@ -325,8 +329,7 @@
 				(pin power_in line
 					(at 0 0 270)
 					(length 0)
-					(hide yes)
-					(name "GND"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -345,6 +348,24 @@
 			(embedded_fonts no)
 		)
 	)
+	(bus_entry
+		(at 109.22 81.28)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02986ca4-b7de-41b3-942a-9d5efc418a2a")
+	)
+	(bus_entry
+		(at 109.22 78.74)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d809de27-2b8d-49ee-bd6c-539c252572a3")
+	)
 	(wire
 		(pts
 			(xy 111.76 71.12) (xy 114.3 71.12)
@@ -354,6 +375,16 @@
 			(type default)
 		)
 		(uuid "0e0e40ab-4a11-4b19-9380-2e03e363f69a")
+	)
+	(bus
+		(pts
+			(xy 104.14 87.63) (xy 109.22 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40aba422-e960-414e-aa12-8f6f5afcc498")
 	)
 	(wire
 		(pts
@@ -367,6 +398,46 @@
 	)
 	(wire
 		(pts
+			(xy 114.3 78.74) (xy 111.76 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97539788-f8ae-4709-9f92-5432e05a2c66")
+	)
+	(bus
+		(pts
+			(xy 109.22 81.28) (xy 109.22 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afd68c26-4e42-46da-9a3c-b27dab969fc8")
+	)
+	(wire
+		(pts
+			(xy 114.3 76.2) (xy 111.76 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba595b0f-9874-4eed-81d4-73b4d2a728d5")
+	)
+	(bus
+		(pts
+			(xy 109.22 78.74) (xy 109.22 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ccf43f69-3d1a-4690-8145-59d5da7b60ec")
+	)
+	(wire
+		(pts
 			(xy 101.6 73.66) (xy 101.6 66.04)
 		)
 		(stroke
@@ -375,27 +446,36 @@
 		)
 		(uuid "dcadf62f-cf96-467e-b900-89752f80619d")
 	)
-	(hierarchical_label "I2C_SCL"
-		(shape input)
-		(at 114.3 76.2 180)
+	(label "I2C.SDA"
+		(at 111.76 78.74 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify right bottom)
 		)
-		(uuid "64137621-9b49-479b-88d7-b6f672550465")
+		(uuid "8acfcfe9-b84d-4979-b77f-f20eefa6a10e")
 	)
-	(hierarchical_label "I2C_SDA"
+	(label "I2C.SCL"
+		(at 111.76 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "be3038e9-d3fe-4cd2-b6ee-b98554a1342a")
+	)
+	(hierarchical_label "I2C"
 		(shape bidirectional)
-		(at 114.3 78.74 180)
+		(at 104.14 87.63 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "c0c9abc3-fefa-4d6c-9613-a87037bc1686")
+		(uuid "830f51d8-c34f-4406-a51d-76425a107043")
 	)
 	(hierarchical_label "DISPLAY_POWER"
 		(shape input)
@@ -460,6 +540,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -529,12 +610,13 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 111.76 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "1"
