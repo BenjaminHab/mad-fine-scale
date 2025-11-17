@@ -717,6 +717,144 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:R_Variable"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.54 -2.54 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "R_Variable"
+				(at -2.54 -1.27 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Variable resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor variable potentiometer rheostat"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_Variable_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.524) (xy 2.54 2.54) (xy 1.524 2.54) (xy 2.54 2.54) (xy -2.032 -2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_Variable_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "custom:MCP4542"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1588,9 +1726,39 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Gain = 1 + R_F ⁄ R_G\nGain = 1 + R_F / (R_GS + R_GV * R_GP / (R_GV + R_GP))\nG_max = 1 + R_F / (R_GS + R_GV_min * R_GP / (R_GV_min + R_GP))\nG_min = 1 + R_F / (R_GS + R_GV_max * R_GP / (R_GV_max + R_GP))\n\nCalculations let me believe, that R_F=330k, R_GP=inf and R_GS=1k are a good combination"
+		(exclude_from_sim no)
+		(at 115.316 23.622 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "0fde65c8-8d61-4531-8a4c-a3c1c29fff74")
+	)
+	(text "According to AoE, an estimate for the maximum load cell differential voltage\nis ~2mV per Volt of supply voltage, i.e. I can expect a differential voltage\n somewhere in the vicinity of 6.66mV."
+		(exclude_from_sim no)
+		(at 66.548 108.712 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "113c30e9-941f-4570-8640-c9c0b78f864c")
+	)
+	(text "Gain = 1 + R_F ⁄ R_G"
+		(exclude_from_sim no)
+		(at 125.73 117.856 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "420ed796-31d5-44f1-86e1-b4f183e782a9")
+	)
 	(text "Danger: Ideally do not use a quad op-amp with max output voltage 1V smaller than positive supply. Not good.\n"
 		(exclude_from_sim no)
-		(at 271.526 88.392 0)
+		(at 266.192 75.184 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1608,9 +1776,19 @@
 		)
 		(uuid "65334689-027e-4f2d-b6e8-99b723027285")
 	)
+	(text "If I want to utilize the full output range of the INA [V_Ref, 3.3VA], \nmy minimum expected gain would be on the order of 1.65V/6.66mV = 247. That seems excessive somehow."
+		(exclude_from_sim no)
+		(at 218.44 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ae03d69e-6fcb-4e65-ab34-5c6f5b2e1f0d")
+	)
 	(text "Active Multiple-Feedback type 2nd order lowpass filter with corner frequency \nf_c = 1/(sqrt(2)*2*pi*20e3*50e-9) = 112.54Hz\nAoE pg 413\n\n"
 		(exclude_from_sim no)
-		(at 254.508 85.09 0)
+		(at 249.174 71.882 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1715,6 +1893,18 @@
 		(uuid "d1320197-80d8-463d-aca2-09159a780209")
 	)
 	(junction
+		(at 158.75 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dbe447db-caa4-404f-b895-a817903979b4")
+	)
+	(junction
+		(at 158.75 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dc2072cd-b7cb-4be3-9a0b-26939804d9df")
+	)
+	(junction
 		(at 167.64 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1755,6 +1945,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fb0ff0e4-71ad-4ff9-8fad-c1fc0920f667")
+	)
+	(junction
+		(at 152.4 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fd80ef11-d73b-407a-b606-824834a5e6fb")
 	)
 	(bus_entry
 		(at 185.42 134.62)
@@ -1826,7 +2022,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 134.62) (xy 154.94 134.62)
+			(xy 142.24 134.62) (xy 146.05 134.62)
 		)
 		(stroke
 			(width 0)
@@ -1923,6 +2119,36 @@
 			(type default)
 		)
 		(uuid "2230b8d5-1072-45b2-b952-845537b3472c")
+	)
+	(wire
+		(pts
+			(xy 152.4 44.45) (xy 158.75 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27549f82-1c84-4855-a742-746ccb9a361d")
+	)
+	(wire
+		(pts
+			(xy 152.4 41.91) (xy 152.4 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b2c028c-faff-436f-8202-53d59896f55d")
+	)
+	(wire
+		(pts
+			(xy 152.4 31.75) (xy 158.75 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cc4782c-0ab7-45a2-9e88-26ef3fe53fa3")
 	)
 	(wire
 		(pts
@@ -2156,6 +2382,36 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 46.99) (xy 158.75 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62bb180a-ac8e-4109-86bb-a52fa58bbf96")
+	)
+	(wire
+		(pts
+			(xy 158.75 54.61) (xy 158.75 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63945cd0-43f1-40ea-9160-c4e74131c8cd")
+	)
+	(wire
+		(pts
+			(xy 165.1 34.29) (xy 165.1 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67906e0b-8864-42bf-8185-f8a31dc1e459")
+	)
+	(wire
+		(pts
 			(xy 128.27 90.17) (xy 128.27 91.44)
 		)
 		(stroke
@@ -2266,6 +2522,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 21.59) (xy 158.75 19.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d1af043-5d1a-4c72-bd0f-8a055d743169")
+	)
+	(wire
+		(pts
 			(xy 82.55 157.48) (xy 82.55 170.18)
 		)
 		(stroke
@@ -2336,6 +2602,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 31.75) (xy 158.75 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89ce1bb7-5aff-4e14-bcd2-970e82447618")
+	)
+	(wire
+		(pts
 			(xy 250.19 36.83) (xy 255.27 36.83)
 		)
 		(stroke
@@ -2383,6 +2659,16 @@
 			(type default)
 		)
 		(uuid "96034cd3-af18-4971-9d59-767f96f95acc")
+	)
+	(wire
+		(pts
+			(xy 158.75 31.75) (xy 158.75 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9934b9db-feec-4a63-9096-6d0a3f33f73a")
 	)
 	(wire
 		(pts
@@ -2476,6 +2762,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 44.45) (xy 165.1 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abb1bb3e-8ed4-4912-87c7-f4316a789112")
+	)
+	(wire
+		(pts
 			(xy 50.8 72.39) (xy 57.15 72.39)
 		)
 		(stroke
@@ -2553,6 +2849,26 @@
 			(type default)
 		)
 		(uuid "b82beabe-6bcc-4898-ab54-58a121df903f")
+	)
+	(wire
+		(pts
+			(xy 153.67 134.62) (xy 154.94 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba5815ee-5429-4cae-b93b-16aba84504a6")
+	)
+	(wire
+		(pts
+			(xy 152.4 34.29) (xy 152.4 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb036799-ee98-48d9-b92c-22f9bd8cf642")
 	)
 	(wire
 		(pts
@@ -2646,6 +2962,26 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 31.75) (xy 152.4 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d805148c-b589-4f54-97ef-58f13231d407")
+	)
+	(wire
+		(pts
+			(xy 144.78 19.05) (xy 158.75 19.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de3e965f-7457-423f-b443-470dc619141a")
+	)
+	(wire
+		(pts
 			(xy 142.24 102.87) (xy 142.24 134.62)
 		)
 		(stroke
@@ -2716,6 +3052,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 57.15) (xy 158.75 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3dc69a0-9fd1-4f47-9fcd-34f0b23baf50")
+	)
+	(wire
+		(pts
 			(xy 143.51 69.85) (xy 143.51 90.17)
 		)
 		(stroke
@@ -2733,6 +3079,16 @@
 			(type default)
 		)
 		(uuid "f6dee72e-d6f4-4bc4-a87c-aa184bb52408")
+	)
+	(wire
+		(pts
+			(xy 165.1 44.45) (xy 165.1 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8574d5f-7a17-49cb-b465-ff8c1f535400")
 	)
 	(wire
 		(pts
@@ -2775,7 +3131,7 @@
 		(uuid "0525380e-dde2-4f91-8a2e-cc9c69ec8647")
 	)
 	(label "INA_IN_N"
-		(at 54.61 43.18 180)
+		(at 45.72 58.42 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2805,7 +3161,7 @@
 		(uuid "acc85d0b-cc39-4d5c-8efc-2a20f989eb3a")
 	)
 	(label "INA_IN_P"
-		(at 54.61 40.64 180)
+		(at 45.72 55.88 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2827,7 +3183,7 @@
 	)
 	(hierarchical_label "INA_OUT_FILTERED_ACTIVE"
 		(shape output)
-		(at 54.61 35.56 180)
+		(at 45.72 50.8 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2849,7 +3205,7 @@
 	)
 	(hierarchical_label "INA_OUT_UNFILTERED"
 		(shape output)
-		(at 54.61 30.48 180)
+		(at 45.72 45.72 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2860,7 +3216,7 @@
 	)
 	(hierarchical_label "INA_OUT_FILTERED_PASSIVE"
 		(shape output)
-		(at 54.61 38.1 180)
+		(at 45.72 53.34 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2871,7 +3227,7 @@
 	)
 	(hierarchical_label "ADC_VREF"
 		(shape output)
-		(at 54.61 33.02 180)
+		(at 45.72 48.26 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3071,7 +3427,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 58.42 33.02 90)
+		(at 49.53 48.26 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3080,7 +3436,7 @@
 		(fields_autoplaced yes)
 		(uuid "065d6e12-ca3c-48be-9cb5-f46bdb28f0fa")
 		(property "Reference" "R2"
-			(at 58.42 26.67 90)
+			(at 49.53 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3088,7 +3444,7 @@
 			)
 		)
 		(property "Value" "1.0K 1%"
-			(at 58.42 29.21 90)
+			(at 49.53 44.45 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3096,7 +3452,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 58.42 34.798 90)
+			(at 49.53 50.038 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3105,7 +3461,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 58.42 33.02 0)
+			(at 49.53 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3114,7 +3470,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 58.42 33.02 0)
+			(at 49.53 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3494,7 +3850,7 @@
 		(fields_autoplaced yes)
 		(uuid "0d16f591-f652-4d90-94cf-2d983e213732")
 		(property "Reference" "R12"
-			(at 155.448 100.7653 0)
+			(at 156.21 100.3299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3502,8 +3858,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100k 1%"
-			(at 155.448 103.3022 0)
+		(property "Value" "330k 1%"
+			(at 156.21 102.8699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3893,7 +4249,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Probe")
-		(at 62.23 43.18 0)
+		(at 53.34 58.42 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3902,7 +4258,7 @@
 		(fields_autoplaced yes)
 		(uuid "27710ac3-d128-4ada-a15f-310945cc2432")
 		(property "Reference" "TP6"
-			(at 66.04 40.3224 0)
+			(at 57.15 55.5624 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3911,7 +4267,7 @@
 			)
 		)
 		(property "Value" "TP_INA_IN_N"
-			(at 66.04 42.8624 0)
+			(at 57.15 58.1024 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3920,7 +4276,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 67.31 43.18 0)
+			(at 58.42 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3929,7 +4285,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 67.31 43.18 0)
+			(at 58.42 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3938,7 +4294,7 @@
 			)
 		)
 		(property "Description" "test point (alternative probe-style design)"
-			(at 62.23 43.18 0)
+			(at 53.34 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4126,7 +4482,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Probe")
-		(at 62.23 35.56 0)
+		(at 53.34 50.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4135,7 +4491,7 @@
 		(fields_autoplaced yes)
 		(uuid "2dd64d63-bb59-4e41-8d2e-489150918a7e")
 		(property "Reference" "TP3"
-			(at 66.04 32.7024 0)
+			(at 57.15 47.9424 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4144,7 +4500,7 @@
 			)
 		)
 		(property "Value" "TP_INA_OUT_ACTIVE"
-			(at 66.04 35.2424 0)
+			(at 57.15 50.4824 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4153,7 +4509,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 67.31 35.56 0)
+			(at 58.42 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4162,7 +4518,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 67.31 35.56 0)
+			(at 58.42 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4171,7 +4527,7 @@
 			)
 		)
 		(property "Description" "test point (alternative probe-style design)"
-			(at 62.23 35.56 0)
+			(at 53.34 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4331,6 +4687,76 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 152.4 38.1 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3aaaabc6-d02f-4a29-aa2c-65c4aa86f9e6")
+		(property "Reference" "R50"
+			(at 154.94 36.8299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "R_GP"
+			(at 154.94 39.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 154.178 38.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 152.4 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 152.4 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3365e76b-97ab-4195-81c9-16d16d080364")
+		)
+		(pin "2"
+			(uuid "14e4e2d4-a4b9-4aff-8d74-65793de24159")
+		)
+		(instances
+			(project "Scale"
+				(path "/adf38c8f-bada-4838-acc6-e6af19946742/df198d10-e7ca-4a90-b978-593213d3e56a"
+					(reference "R50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 237.49 30.48 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4399,7 +4825,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Probe")
-		(at 62.23 30.48 0)
+		(at 53.34 45.72 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4408,7 +4834,7 @@
 		(fields_autoplaced yes)
 		(uuid "431d8258-ae31-48db-bf5e-ac23ff5633be")
 		(property "Reference" "TP1"
-			(at 66.04 27.6224 0)
+			(at 57.15 42.8624 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4417,7 +4843,7 @@
 			)
 		)
 		(property "Value" "TP_INA_OUT_UNFILTERED"
-			(at 66.04 30.1624 0)
+			(at 57.15 45.4024 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4426,7 +4852,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 67.31 30.48 0)
+			(at 58.42 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4435,7 +4861,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 67.31 30.48 0)
+			(at 58.42 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4444,7 +4870,7 @@
 			)
 		)
 		(property "Description" "test point (alternative probe-style design)"
-			(at 62.23 30.48 0)
+			(at 53.34 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4832,7 +5258,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 58.42 40.64 90)
+		(at 49.53 55.88 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4841,7 +5267,7 @@
 		(fields_autoplaced yes)
 		(uuid "72f6e137-f6a0-4e52-8368-47bffeb6ff5b")
 		(property "Reference" "R5"
-			(at 58.42 34.29 90)
+			(at 49.53 49.53 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4849,7 +5275,7 @@
 			)
 		)
 		(property "Value" "1.0K 1%"
-			(at 58.42 36.83 90)
+			(at 49.53 52.07 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4857,7 +5283,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 58.42 42.418 90)
+			(at 49.53 57.658 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4866,7 +5292,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 58.42 40.64 0)
+			(at 49.53 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4875,7 +5301,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 58.42 40.64 0)
+			(at 49.53 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5044,7 +5470,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Probe")
-		(at 62.23 33.02 0)
+		(at 53.34 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5053,7 +5479,7 @@
 		(fields_autoplaced yes)
 		(uuid "769143a9-9e59-485f-a49d-277b26f0f2de")
 		(property "Reference" "TP2"
-			(at 66.04 30.1624 0)
+			(at 57.15 45.4024 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5062,7 +5488,7 @@
 			)
 		)
 		(property "Value" "TP_ADC_VREF"
-			(at 66.04 32.7024 0)
+			(at 57.15 47.9424 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5071,7 +5497,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 67.31 33.02 0)
+			(at 58.42 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5080,7 +5506,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 67.31 33.02 0)
+			(at 58.42 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5089,7 +5515,7 @@
 			)
 		)
 		(property "Description" "test point (alternative probe-style design)"
-			(at 62.23 33.02 0)
+			(at 53.34 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5317,7 +5743,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 58.42 35.56 90)
+		(at 49.53 50.8 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5326,7 +5752,7 @@
 		(fields_autoplaced yes)
 		(uuid "825d6602-1894-4139-a798-1cff2fd53d2a")
 		(property "Reference" "R3"
-			(at 58.42 29.21 90)
+			(at 49.53 44.45 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5334,7 +5760,7 @@
 			)
 		)
 		(property "Value" "1.0K 1%"
-			(at 58.42 31.75 90)
+			(at 49.53 46.99 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5342,7 +5768,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 58.42 37.338 90)
+			(at 49.53 52.578 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5351,7 +5777,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 58.42 35.56 0)
+			(at 49.53 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5360,7 +5786,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 58.42 35.56 0)
+			(at 49.53 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5378,6 +5804,74 @@
 			(project "Scale"
 				(path "/adf38c8f-bada-4838-acc6-e6af19946742/df198d10-e7ca-4a90-b978-593213d3e56a"
 					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 149.86 134.62 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8302dfdb-f2e4-4211-92d1-3c4781c1ed61")
+		(property "Reference" "R45"
+			(at 149.86 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k 1%"
+			(at 149.86 130.81 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 149.86 136.398 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 149.86 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 149.86 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "77eba80c-8b9f-4b3f-af77-e08aea5f3c2b")
+		)
+		(pin "2"
+			(uuid "6dfba6cc-b0be-412b-9d03-dd764bb4f75a")
+		)
+		(instances
+			(project "Scale"
+				(path "/adf38c8f-bada-4838-acc6-e6af19946742/df198d10-e7ca-4a90-b978-593213d3e56a"
+					(reference "R45")
 					(unit 1)
 				)
 			)
@@ -5444,6 +5938,76 @@
 			(project "Scale"
 				(path "/adf38c8f-bada-4838-acc6-e6af19946742/df198d10-e7ca-4a90-b978-593213d3e56a"
 					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Variable")
+		(at 165.1 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8f7a666f-1a5d-40c1-b6c0-e4c51475e9d4")
+		(property "Reference" "R52"
+			(at 168.91 36.8299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R_GV"
+			(at 168.91 39.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 163.322 38.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Variable resistor"
+			(at 165.1 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2d097ec2-22f8-487b-ae04-47462542a1cd")
+		)
+		(pin "1"
+			(uuid "ce80e269-0076-49c3-8c06-810c73c61215")
+		)
+		(instances
+			(project "Scale"
+				(path "/adf38c8f-bada-4838-acc6-e6af19946742/df198d10-e7ca-4a90-b978-593213d3e56a"
+					(reference "R52")
 					(unit 1)
 				)
 			)
@@ -6336,7 +6900,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 58.42 38.1 90)
+		(at 49.53 53.34 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6345,7 +6909,7 @@
 		(fields_autoplaced yes)
 		(uuid "c42285f4-67b0-439a-bfb1-4b35ebd43448")
 		(property "Reference" "R4"
-			(at 58.42 31.75 90)
+			(at 49.53 46.99 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6353,7 +6917,7 @@
 			)
 		)
 		(property "Value" "1.0K 1%"
-			(at 58.42 34.29 90)
+			(at 49.53 49.53 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6361,7 +6925,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 58.42 39.878 90)
+			(at 49.53 55.118 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6370,7 +6934,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 58.42 38.1 0)
+			(at 49.53 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6379,7 +6943,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 58.42 38.1 0)
+			(at 49.53 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6608,7 +7172,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Probe")
-		(at 62.23 40.64 0)
+		(at 53.34 55.88 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6617,7 +7181,7 @@
 		(fields_autoplaced yes)
 		(uuid "cebd0e62-5d5a-40d0-ac24-3b3563dfeef0")
 		(property "Reference" "TP5"
-			(at 66.04 37.7824 0)
+			(at 57.15 53.0224 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6626,7 +7190,7 @@
 			)
 		)
 		(property "Value" "TP_INA_IN_P"
-			(at 66.04 40.3224 0)
+			(at 57.15 55.5624 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6635,7 +7199,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 67.31 40.64 0)
+			(at 58.42 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6644,7 +7208,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 67.31 40.64 0)
+			(at 58.42 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6653,7 +7217,7 @@
 			)
 		)
 		(property "Description" "test point (alternative probe-style design)"
-			(at 62.23 40.64 0)
+			(at 53.34 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6668,6 +7232,76 @@
 			(project "Scale"
 				(path "/adf38c8f-bada-4838-acc6-e6af19946742/df198d10-e7ca-4a90-b978-593213d3e56a"
 					(reference "TP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 158.75 50.8 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cf2847d6-eb53-4892-a294-57556ec1b7bc")
+		(property "Reference" "R53"
+			(at 161.29 49.5299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "R_GS"
+			(at 161.29 52.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 160.528 50.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 158.75 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 158.75 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "96640157-8147-4f61-ab0b-9feac53d9aa2")
+		)
+		(pin "2"
+			(uuid "456fe306-d805-46e8-ba48-f86b4cbbd631")
+		)
+		(instances
+			(project "Scale"
+				(path "/adf38c8f-bada-4838-acc6-e6af19946742/df198d10-e7ca-4a90-b978-593213d3e56a"
+					(reference "R53")
 					(unit 1)
 				)
 			)
@@ -6741,7 +7375,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 58.42 30.48 90)
+		(at 49.53 45.72 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6750,7 +7384,7 @@
 		(fields_autoplaced yes)
 		(uuid "d5c17fbf-78d7-4a18-9cbb-2964bf1eeaf7")
 		(property "Reference" "R1"
-			(at 58.42 24.13 90)
+			(at 49.53 39.37 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6758,7 +7392,7 @@
 			)
 		)
 		(property "Value" "1.0K 1%"
-			(at 58.42 26.67 90)
+			(at 49.53 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6766,7 +7400,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 58.42 32.258 90)
+			(at 49.53 47.498 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6775,7 +7409,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 58.42 30.48 0)
+			(at 49.53 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6784,7 +7418,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 58.42 30.48 0)
+			(at 49.53 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7013,7 +7647,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 58.42 43.18 90)
+		(at 49.53 58.42 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7022,7 +7656,7 @@
 		(fields_autoplaced yes)
 		(uuid "e4fca952-fcc5-494e-996b-5da7db21fc57")
 		(property "Reference" "R6"
-			(at 58.42 36.83 90)
+			(at 49.53 52.07 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7030,7 +7664,7 @@
 			)
 		)
 		(property "Value" "1.0K 1%"
-			(at 58.42 39.37 90)
+			(at 49.53 54.61 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7038,7 +7672,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 58.42 44.958 90)
+			(at 49.53 60.198 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7047,7 +7681,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 58.42 43.18 0)
+			(at 49.53 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7056,7 +7690,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 58.42 43.18 0)
+			(at 49.53 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7292,7 +7926,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Probe")
-		(at 62.23 38.1 0)
+		(at 53.34 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7301,7 +7935,7 @@
 		(fields_autoplaced yes)
 		(uuid "fc58d244-3867-4b7b-a281-7da45865cc9b")
 		(property "Reference" "TP4"
-			(at 66.04 35.2424 0)
+			(at 57.15 50.4824 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7310,7 +7944,7 @@
 			)
 		)
 		(property "Value" "TP_INA_OUT_FILTERED_PASSIVE"
-			(at 66.04 37.7824 0)
+			(at 57.15 53.0224 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7319,7 +7953,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 67.31 38.1 0)
+			(at 58.42 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7328,7 +7962,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 67.31 38.1 0)
+			(at 58.42 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7337,7 +7971,7 @@
 			)
 		)
 		(property "Description" "test point (alternative probe-style design)"
-			(at 62.23 38.1 0)
+			(at 53.34 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7352,6 +7986,76 @@
 			(project "Scale"
 				(path "/adf38c8f-bada-4838-acc6-e6af19946742/df198d10-e7ca-4a90-b978-593213d3e56a"
 					(reference "TP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 158.75 25.4 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fe4c40cb-55b0-472c-b54e-e11d04f10bcc")
+		(property "Reference" "R51"
+			(at 161.29 24.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "R_F"
+			(at 161.29 26.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 160.528 25.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 158.75 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 158.75 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5fa283d0-407f-41e8-b834-40a92da7a8db")
+		)
+		(pin "2"
+			(uuid "7cb7efbe-bb0d-4320-a63d-9a8a96db0c6e")
+		)
+		(instances
+			(project "Scale"
+				(path "/adf38c8f-bada-4838-acc6-e6af19946742/df198d10-e7ca-4a90-b978-593213d3e56a"
+					(reference "R51")
 					(unit 1)
 				)
 			)
