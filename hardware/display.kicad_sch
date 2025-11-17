@@ -446,7 +446,7 @@
 		)
 		(uuid "dcadf62f-cf96-467e-b900-89752f80619d")
 	)
-	(label "I2C.SDA"
+	(label "SDA"
 		(at 111.76 78.74 180)
 		(effects
 			(font
@@ -456,7 +456,7 @@
 		)
 		(uuid "8acfcfe9-b84d-4979-b77f-f20eefa6a10e")
 	)
-	(label "I2C.SCL"
+	(label "SCL"
 		(at 111.76 76.2 180)
 		(effects
 			(font
@@ -466,7 +466,7 @@
 		)
 		(uuid "be3038e9-d3fe-4cd2-b6ee-b98554a1342a")
 	)
-	(hierarchical_label "I2C"
+	(hierarchical_label "{I2C}"
 		(shape bidirectional)
 		(at 104.14 87.63 180)
 		(effects
@@ -516,7 +516,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Custom:0.96'' Display"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 			(at 119.38 73.66 0)
 			(effects
 				(font

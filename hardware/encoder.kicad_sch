@@ -269,49 +269,49 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:Rotary_Encoder_Switch"
-			(pin_names
-				(offset 0.254)
-				(hide yes)
-			)
+		(symbol "PEC12R-3217F-S0024:PEC12R-3217F-S0024"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "SW"
-				(at 0 6.604 0)
+			(property "Reference" "S"
+				(at 21.59 15.24 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 				)
 			)
-			(property "Value" "Device_Rotary_Encoder_Switch"
-				(at 0 -6.604 0)
+			(property "Value" "PEC12R-3217F-S0024"
+				(at 21.59 12.7 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 				)
 			)
-			(property "Footprint" ""
-				(at -3.81 4.064 0)
+			(property "Footprint" "PEC12R3217FS0024"
+				(at 21.59 -87.3 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 					(hide yes)
 				)
 			)
-			(property "Datasheet" ""
-				(at 0 6.604 0)
+			(property "Datasheet" "https://www.bourns.com/docs/product-datasheets/pec12r.pdf"
+				(at 21.59 -187.3 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 					(hide yes)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Encoders HORZ 24DET 24PULSE 17.5mm SHAFT SPST SW"
 				(at 0 0 0)
 				(effects
 					(font
@@ -320,19 +320,80 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "RotaryEncoder*Switch*"
-				(at 0 0 0)
+			(property "Height" "18"
+				(at 21.59 -387.3 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 					(hide yes)
 				)
 			)
-			(symbol "Rotary_Encoder_Switch_0_1"
+			(property "Manufacturer_Name" "Bourns"
+				(at 21.59 -487.3 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer_Part_Number" "PEC12R-3217F-S0024"
+				(at 21.59 -587.3 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Part Number" "652-PEC12R3217FS0024"
+				(at 21.59 -687.3 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/PEC12R-3217F-S0024?qs=6oMev5NRZMGozzY14VEU9A%3D%3D"
+				(at 21.59 -787.3 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Arrow Part Number" ""
+				(at 21.59 -887.3 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(property "Arrow Price/Stock" ""
+				(at 21.59 -987.3 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+					(hide yes)
+				)
+			)
+			(symbol "PEC12R-3217F-S0024_1_1"
 				(rectangle
-					(start -5.08 5.08)
-					(end 5.08 -5.08)
+					(start 5.08 10.16)
+					(end 20.32 -17.78)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -341,231 +402,17 @@
 						(type background)
 					)
 				)
-				(polyline
-					(pts
-						(xy -5.08 2.54) (xy -3.81 2.54) (xy -3.81 2.032)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 0) (xy -3.81 0) (xy -3.81 -1.016) (xy -3.302 -2.032)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 -2.54) (xy -3.81 -2.54) (xy -3.81 -2.032)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -4.318 0) (xy -3.81 0) (xy -3.81 1.016) (xy -3.302 2.032)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -3.81 0)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -1.778) (xy -0.635 1.778)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.381 2.667)
-					(mid 2.3368 -0.0635)
-					(end -0.381 -2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -0.381 0)
-					(radius 1.905)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.381 -1.778) (xy -0.381 1.778)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.127 1.778) (xy -0.127 -1.778)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 2.921) (xy -0.508 2.667) (xy 0.127 2.286)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 -3.048) (xy -0.508 -2.794) (xy 0.127 -2.413)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 1.016) (xy 3.81 -1.016)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 0) (xy 3.429 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 4.318 1.016)
-					(radius 0.127)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 4.318 -1.016)
-					(radius 0.127)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 4.318 2.54) (xy 4.318 1.016)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 -2.54) (xy 4.318 -2.54) (xy 4.318 -1.016)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Rotary_Encoder_Switch_1_1"
 				(pin passive line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "A"
+					(at 0 0 0)
+					(length 5.08)
+					(name "MH1"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "A"
+					(number "MH1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -574,34 +421,16 @@
 					)
 				)
 				(pin passive line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "C"
+					(at 10.16 15.24 270)
+					(length 5.08)
+					(name "COM"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -7.62 -2.54 0)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -610,16 +439,16 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 2.54 180)
-					(length 2.54)
-					(name "S1"
+					(at 10.16 -22.86 90)
+					(length 5.08)
+					(name "CHANNEL_A"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "S1"
+					(number "A1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -628,16 +457,70 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 -2.54 180)
-					(length 2.54)
-					(name "S2"
+					(at 12.7 15.24 270)
+					(length 5.08)
+					(name "NO"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "S2"
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 -22.86 90)
+					(length 5.08)
+					(name "COMMON"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "C1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 -22.86 90)
+					(length 5.08)
+					(name "CHANNEL_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 25.4 0 180)
+					(length 5.08)
+					(name "MH2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "MH2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -888,7 +771,7 @@
 		(uuid "5ff19d63-2cb4-438b-93c4-e66d37a05329")
 	)
 	(junction
-		(at 111.76 90.17)
+		(at 111.76 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "69014e13-63e6-4d29-8be0-8eb7c8731f5b")
@@ -923,7 +806,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 77.47) (xy 111.76 80.01)
+			(xy 111.76 101.6) (xy 111.76 104.14)
 		)
 		(stroke
 			(width 0)
@@ -943,7 +826,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 90.17) (xy 111.76 92.71)
+			(xy 111.76 114.3) (xy 111.76 116.84)
 		)
 		(stroke
 			(width 0)
@@ -953,7 +836,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 97.79) (xy 111.76 100.33)
+			(xy 111.76 121.92) (xy 111.76 124.46)
 		)
 		(stroke
 			(width 0)
@@ -1023,7 +906,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 87.63) (xy 111.76 90.17)
+			(xy 111.76 111.76) (xy 111.76 114.3)
 		)
 		(stroke
 			(width 0)
@@ -1033,7 +916,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 59.69) (xy 109.22 62.23)
+			(xy 109.22 59.69) (xy 109.22 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1063,7 +946,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 59.69) (xy 111.76 62.23)
+			(xy 111.76 59.69) (xy 111.76 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1103,7 +986,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 90.17) (xy 114.3 90.17)
+			(xy 111.76 114.3) (xy 114.3 114.3)
 		)
 		(stroke
 			(width 0)
@@ -1133,7 +1016,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 77.47) (xy 106.68 80.01)
+			(xy 109.22 101.6) (xy 109.22 104.14)
 		)
 		(stroke
 			(width 0)
@@ -1153,7 +1036,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 59.69) (xy 106.68 62.23)
+			(xy 106.68 59.69) (xy 106.68 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1163,7 +1046,7 @@
 	)
 	(hierarchical_label "ENCODER_BUTTON"
 		(shape output)
-		(at 114.3 90.17 0)
+		(at 114.3 114.3 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1193,91 +1076,6 @@
 			(justify right)
 		)
 		(uuid "df2a6036-7274-4398-9365-148b6ddab90d")
-	)
-	(symbol
-		(lib_id "Device:Rotary_Encoder_Switch")
-		(at 109.22 69.85 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005d0739e0")
-		(property "Reference" "SW2"
-			(at 118.5418 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PEC12R Encoder"
-			(at 116.2304 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Custom:Bourns PEC12R Vertical"
-			(at 113.284 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 115.824 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 109.22 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "PEC12R-4120F-S0012"
-			(at 109.22 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "A"
-			(uuid "39ccb9ed-886b-44db-a1d2-1c0d0ddc56ce")
-		)
-		(pin "B"
-			(uuid "0a348cc8-a92d-4aee-bbb1-7118d4b57b62")
-		)
-		(pin "C"
-			(uuid "7dd0ff0f-f758-44ab-a75b-9c1c4c2a8532")
-		)
-		(pin "S1"
-			(uuid "c40a9a32-81d3-4916-ad6e-a639e04cfd1d")
-		)
-		(pin "S2"
-			(uuid "79a50418-f630-4dbd-9e90-2ddad0544245")
-		)
-		(instances
-			(project ""
-				(path "/adf38c8f-bada-4838-acc6-e6af19946742/82306041-d571-45f1-89c8-d149d0eff0c6"
-					(reference "SW2")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:+3.3V")
@@ -1618,7 +1416,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 111.76 83.82 0)
+		(at 111.76 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1626,7 +1424,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005d073a18")
 		(property "Reference" "R33"
-			(at 113.538 82.6516 0)
+			(at 113.538 106.7816 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1635,7 +1433,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 113.538 84.963 0)
+			(at 113.538 109.093 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1644,7 +1442,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 109.982 83.82 90)
+			(at 109.982 107.95 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1653,7 +1451,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 111.76 83.82 0)
+			(at 111.76 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1662,7 +1460,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 111.76 83.82 0)
+			(at 111.76 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1825,7 +1623,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 106.68 80.01 0)
+		(at 109.22 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1833,7 +1631,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005d1556ba")
 		(property "Reference" "#PWR060"
-			(at 106.68 86.36 0)
+			(at 109.22 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1842,7 +1640,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 106.807 84.4042 0)
+			(at 109.347 108.5342 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1850,7 +1648,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 106.68 80.01 0)
+			(at 109.22 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1859,7 +1657,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 106.68 80.01 0)
+			(at 109.22 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1868,7 +1666,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 106.68 80.01 0)
+			(at 109.22 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2084,8 +1882,228 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 96.52 86.36 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5246e0c8-a436-4296-85a0-064eca6d73b4")
+		(property "Reference" "#PWR030"
+			(at 90.17 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 92.1258 86.487 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 96.52 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a747ff9c-37ba-4723-be04-0a68cbc1706f")
+		)
+		(instances
+			(project "Scale"
+				(path "/adf38c8f-bada-4838-acc6-e6af19946742/82306041-d571-45f1-89c8-d149d0eff0c6"
+					(reference "#PWR030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PEC12R-3217F-S0024:PEC12R-3217F-S0024")
+		(at 121.92 86.36 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5d9351fc-e18f-4e95-8dd6-7009690927b2")
+		(property "Reference" "S1"
+			(at 129.54 80.9146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PEC12R-3217F-S0024"
+			(at 129.54 83.4546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "custom:PEC12R3217FS0024"
+			(at 100.33 -0.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.bourns.com/docs/product-datasheets/pec12r.pdf"
+			(at 100.33 -100.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "Encoders HORZ 24DET 24PULSE 17.5mm SHAFT SPST SW"
+			(at 121.92 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "18"
+			(at 100.33 -300.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "Bourns"
+			(at 100.33 -400.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "PEC12R-3217F-S0024"
+			(at 100.33 -500.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "652-PEC12R3217FS0024"
+			(at 100.33 -600.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/PEC12R-3217F-S0024?qs=6oMev5NRZMGozzY14VEU9A%3D%3D"
+			(at 100.33 -700.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 100.33 -800.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 100.33 -900.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "MH2"
+			(uuid "a48cf3b5-7019-42bd-aee7-e80f4d5da1cc")
+		)
+		(pin "A1"
+			(uuid "03307a1a-6258-4859-854e-6768573bfca6")
+		)
+		(pin "B1"
+			(uuid "d0dcd375-a087-4ba4-a745-10371b4aac73")
+		)
+		(pin "C1"
+			(uuid "965636d3-03af-44c4-a388-5e1819d5cafa")
+		)
+		(pin "1"
+			(uuid "e9c8d818-139f-483c-8e21-b95b9dfb81f9")
+		)
+		(pin "2"
+			(uuid "26c1b47a-30eb-48bb-905f-7907843006f7")
+		)
+		(pin "MH1"
+			(uuid "c2f86ce1-1b88-4bec-9b46-aefab3c822db")
+		)
+		(instances
+			(project ""
+				(path "/adf38c8f-bada-4838-acc6-e6af19946742/82306041-d571-45f1-89c8-d149d0eff0c6"
+					(reference "S1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
-		(at 111.76 95.25 0)
+		(at 111.76 119.38 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2093,7 +2111,7 @@
 		(dnp no)
 		(uuid "668fd7b7-5d4e-4543-9216-be4aff9723ab")
 		(property "Reference" "C21"
-			(at 114.0968 94.0816 0)
+			(at 114.0968 118.2116 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2102,7 +2120,7 @@
 			)
 		)
 		(property "Value" "10nF"
-			(at 114.0968 96.393 0)
+			(at 114.0968 120.523 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2111,7 +2129,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 111.76 95.25 0)
+			(at 111.76 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2120,7 +2138,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 111.76 95.25 0)
+			(at 111.76 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2129,7 +2147,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 111.76 95.25 0)
+			(at 111.76 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2154,15 +2172,15 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 111.76 100.33 0)
+		(at 121.92 86.36 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "dbcb7cd1-b648-460e-91da-63d23ac3bf4a")
-		(property "Reference" "#PWR063"
-			(at 111.76 106.68 0)
+		(uuid "93a62a80-da4c-45e8-b001-77c8f62d0200")
+		(property "Reference" "#PWR029"
+			(at 128.27 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2171,7 +2189,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 111.887 104.7242 0)
+			(at 126.3142 86.233 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2179,7 +2197,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 111.76 100.33 0)
+			(at 121.92 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2188,7 +2206,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 111.76 100.33 0)
+			(at 121.92 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2197,7 +2215,72 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 111.76 100.33 0)
+			(at 121.92 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ce6ae21a-db2f-4e32-a34a-3e7870036aca")
+		)
+		(instances
+			(project "Scale"
+				(path "/adf38c8f-bada-4838-acc6-e6af19946742/82306041-d571-45f1-89c8-d149d0eff0c6"
+					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 111.76 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dbcb7cd1-b648-460e-91da-63d23ac3bf4a")
+		(property "Reference" "#PWR063"
+			(at 111.76 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 111.887 128.8542 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 111.76 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 111.76 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
