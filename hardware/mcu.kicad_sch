@@ -2089,6 +2089,10 @@
 		(at 229.87 121.92)
 		(uuid "b8a67487-e378-4e12-863e-3753e0b6839e")
 	)
+	(no_connect
+		(at 127 80.01)
+		(uuid "d4320f87-63ea-43e2-a6b2-a358767d54e7")
+	)
 	(bus_entry
 		(at 81.28 156.21)
 		(size -2.54 -2.54)
@@ -2839,7 +2843,7 @@
 		)
 		(uuid "95c49de4-026b-418b-9e57-6b5ea90404db")
 	)
-	(hierarchical_label "GPIO_PB5"
+	(hierarchical_label "GPIO_PB6"
 		(shape bidirectional)
 		(at 78.74 133.35 0)
 		(effects
@@ -2871,17 +2875,6 @@
 			(justify left)
 		)
 		(uuid "b17db259-d665-4872-aa2e-8783c686af7e")
-	)
-	(hierarchical_label "GPIO_PA8"
-		(shape bidirectional)
-		(at 127 80.01 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b7d1c7dc-363c-4bd9-999b-5d00d8cea7c8")
 	)
 	(hierarchical_label "DPOT_HVC_A0"
 		(shape output)

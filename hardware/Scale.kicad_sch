@@ -1380,16 +1380,6 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 68.58) (xy 139.7 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "53d0cbb5-2d40-42d8-8f51-1ba08db0d430")
-	)
-	(wire
-		(pts
 			(xy 132.08 130.81) (xy 132.08 146.05)
 		)
 		(stroke
@@ -2607,16 +2597,6 @@
 				(justify left)
 			)
 		)
-		(pin "LDO_EN" input
-			(at 139.7 68.58 270)
-			(uuid "7c28bb42-4959-4b34-8707-e95f30b7fcc3")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(instances
 			(project "Scale"
 				(path "/adf38c8f-bada-4838-acc6-e6af19946742"
@@ -2981,16 +2961,6 @@
 				(justify left)
 			)
 		)
-		(pin "GPIO_PA8" bidirectional
-			(at 124.46 130.81 270)
-			(uuid "a1a26308-6131-43f6-bff8-f002fdf06c13")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "SPI2{SPI}" bidirectional
 			(at 119.38 119.38 180)
 			(uuid "be909091-e4a9-48be-b87b-bf87568e0c8a")
@@ -3041,16 +3011,6 @@
 				(justify left)
 			)
 		)
-		(pin "LDO_EN" output
-			(at 139.7 80.01 90)
-			(uuid "a8e0cc9c-baa3-4824-b684-ecfe1b3feed0")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "I2C1{I2C}" bidirectional
 			(at 119.38 116.84 180)
 			(uuid "d52e559f-a06d-44ec-b19f-7df8a010d9dd")
@@ -3084,6 +3044,16 @@
 		(pin "ADC_IRQ" input
 			(at 119.38 114.3 180)
 			(uuid "6d53cb26-7b7b-4e2d-a5ff-31f9f2617da1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GPIO_PB6" bidirectional
+			(at 124.46 130.81 270)
+			(uuid "cdaed685-b0e2-4789-8238-dadd2bf281be")
 			(effects
 				(font
 					(size 1.27 1.27)
