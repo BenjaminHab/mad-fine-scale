@@ -1736,7 +1736,7 @@
 		)
 		(uuid "0fde65c8-8d61-4531-8a4c-a3c1c29fff74")
 	)
-	(text "According to AoE, an estimate for the maximum load cell differential voltage\nis ~2mV per Volt of supply voltage, i.e. I can expect a differential voltage\n somewhere in the vicinity of 6.66mV."
+	(text "According to AoE, an estimate for the maximum load cell differential voltage\nis ~2mV per Volt of supply voltage, i.e. I can expect a differential voltage\n in the range +-6.66mV."
 		(exclude_from_sim no)
 		(at 66.548 108.712 0)
 		(effects
