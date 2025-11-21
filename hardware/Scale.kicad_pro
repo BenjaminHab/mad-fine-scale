@@ -49,7 +49,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.2
+          "min_clearance": 0.16
         }
       },
       "diff_pair_dimensions": [
@@ -143,7 +143,7 @@
         "min_through_hole_diameter": 0.254,
         "min_track_width": 0.1524,
         "min_via_annular_width": 0.127,
-        "min_via_diameter": 0.6,
+        "min_via_diameter": 0.508,
         "solder_mask_clearance": 0.0,
         "solder_mask_min_width": 0.0,
         "solder_mask_to_copper_clearance": 0.0,
@@ -195,8 +195,7 @@
       ],
       "track_widths": [
         0.0,
-        0.125,
-        0.15,
+        0.16,
         0.2,
         0.25,
         0.5
@@ -233,11 +232,7 @@
           "drill": 0.0
         },
         {
-          "diameter": 0.65,
-          "drill": 0.25
-        },
-        {
-          "diameter": 0.7,
+          "diameter": 0.6,
           "drill": 0.3
         },
         {
@@ -246,7 +241,7 @@
         },
         {
           "diameter": 0.9,
-          "drill": 0.95
+          "drill": 0.45
         }
       ],
       "zones_allow_external_fillets": false,
