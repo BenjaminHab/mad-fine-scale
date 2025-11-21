@@ -1728,7 +1728,7 @@
 	)
 	(text "Gain = 1 + R_F ⁄ R_G\nGain = 1 + R_F / (R_GS + R_GV * R_GP / (R_GV + R_GP))\nG_max = 1 + R_F / (R_GS + R_GV_min * R_GP / (R_GV_min + R_GP))\nG_min = 1 + R_F / (R_GS + R_GV_max * R_GP / (R_GV_max + R_GP))\n\nCalculations let me believe, that R_F=330k, R_GP=inf and R_GS=1k are a good combination"
 		(exclude_from_sim no)
-		(at 115.316 23.622 0)
+		(at 94.996 20.828 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1845,6 +1845,12 @@
 		(uuid "60b55822-a7d1-4d03-8319-78147aa561c9")
 	)
 	(junction
+		(at 165.1 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6f6b8508-4873-4e5d-93e2-8290b4619625")
+	)
+	(junction
 		(at 128.27 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1945,12 +1951,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fb0ff0e4-71ad-4ff9-8fad-c1fc0920f667")
-	)
-	(junction
-		(at 152.4 31.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fd80ef11-d73b-407a-b606-824834a5e6fb")
 	)
 	(bus_entry
 		(at 185.42 134.62)
@@ -2882,6 +2882,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 57.15) (xy 168.91 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc6f5aeb-4c2f-4fe9-bf0b-7e4bf60d841f")
+	)
+	(wire
+		(pts
 			(xy 138.43 102.87) (xy 138.43 106.68)
 		)
 		(stroke
@@ -2962,26 +2972,6 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 31.75) (xy 152.4 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d805148c-b589-4f54-97ef-58f13231d407")
-	)
-	(wire
-		(pts
-			(xy 144.78 19.05) (xy 158.75 19.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "de3e965f-7457-423f-b443-470dc619141a")
-	)
-	(wire
-		(pts
 			(xy 142.24 102.87) (xy 142.24 134.62)
 		)
 		(stroke
@@ -3052,13 +3042,13 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 57.15) (xy 158.75 57.15)
+			(xy 165.1 31.75) (xy 167.64 31.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f3dc69a0-9fd1-4f47-9fcd-34f0b23baf50")
+		(uuid "f24bf02d-38f8-47a5-9cc9-094f379a493a")
 	)
 	(wire
 		(pts
@@ -3089,6 +3079,16 @@
 			(type default)
 		)
 		(uuid "f8574d5f-7a17-49cb-b465-ff8c1f535400")
+	)
+	(wire
+		(pts
+			(xy 158.75 19.05) (xy 167.64 19.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9c0e795-54f6-45ba-9d48-3a0bc2680d5d")
 	)
 	(wire
 		(pts
@@ -3129,6 +3129,16 @@
 			(justify left bottom)
 		)
 		(uuid "0525380e-dde2-4f91-8a2e-cc9c69ec8647")
+	)
+	(label "INA_FB"
+		(at 167.64 31.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "06572d3c-407a-4695-8b8e-5830aa02c859")
 	)
 	(label "INA_IN_N"
 		(at 45.72 58.42 180)
@@ -3180,6 +3190,28 @@
 			(justify left)
 		)
 		(uuid "034f50c1-4f2d-4b9b-83c5-7dce278358f4")
+	)
+	(hierarchical_label "INA_OUT_UNFILTERED"
+		(shape output)
+		(at 167.64 19.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0d90323e-84cb-49b5-84b7-a97794ada57a")
+	)
+	(hierarchical_label "ADC_VREF"
+		(shape output)
+		(at 168.91 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1e0e6726-96f0-4c19-af34-f534d659c29d")
 	)
 	(hierarchical_label "INA_OUT_FILTERED_ACTIVE"
 		(shape output)

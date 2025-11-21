@@ -1211,6 +1211,12 @@
 		(members "SCL" "SDA")
 	)
 	(junction
+		(at 105.41 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "19f072fd-c664-4787-a22d-54151b365070")
+	)
+	(junction
 		(at 111.76 116.84)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1307,6 +1313,26 @@
 			(type default)
 		)
 		(uuid "27746a22-db49-4484-8520-5ca7a23a7b10")
+	)
+	(wire
+		(pts
+			(xy 105.41 109.22) (xy 119.38 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ea60bf5-a578-447d-8598-251667bb9dd5")
+	)
+	(wire
+		(pts
+			(xy 83.82 142.24) (xy 83.82 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f09c453-6677-4c13-966f-66fb7ce5f4af")
 	)
 	(wire
 		(pts
@@ -1520,6 +1546,16 @@
 	)
 	(wire
 		(pts
+			(xy 83.82 139.7) (xy 105.41 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e374b1e-6e04-47c9-9c84-d03d83e5f0b9")
+	)
+	(wire
+		(pts
 			(xy 78.74 137.16) (xy 102.87 137.16)
 		)
 		(stroke
@@ -1570,7 +1606,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 109.22) (xy 119.38 109.22)
+			(xy 99.06 109.22) (xy 105.41 109.22)
 		)
 		(stroke
 			(width 0)
@@ -1837,6 +1873,16 @@
 			(type default)
 		)
 		(uuid "fccb372a-97ef-4a45-8d77-f9e47a9944b3")
+	)
+	(wire
+		(pts
+			(xy 105.41 109.22) (xy 105.41 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff8bed1d-4141-4495-a9c6-d2764d274cf6")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2374,6 +2420,16 @@
 		(pin "{SPI}" bidirectional
 			(at 99.06 153.67 0)
 			(uuid "c99a41c7-215f-4fbc-9731-7f701476e443")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "INA_OUT_FILTERED_PASSIVE" output
+			(at 83.82 142.24 90)
+			(uuid "de1b2321-69a5-4a94-8039-bdd4d2167623")
 			(effects
 				(font
 					(size 1.27 1.27)
