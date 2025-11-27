@@ -513,6 +513,13 @@
         "wire_width": 6
       },
       {
+        "line_style": 0,
+        "name": "GND",
+        "pcb_color": "rgb(92, 92, 92)",
+        "priority": 0,
+        "schematic_color": "rgb(92, 92, 92)"
+      },
+      {
         "bus_width": 12,
         "clearance": 0.1524,
         "diff_pair_gap": 0.25,
@@ -522,7 +529,7 @@
         "microvia_drill": 0.45,
         "name": "Min",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
+        "priority": 2,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.1524,
         "via_diameter": 0.6,
@@ -534,31 +541,34 @@
         "clearance": 0.16,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.25,
-        "line_style": 0,
+        "line_style": 1,
         "microvia_diameter": 0.8,
         "microvia_drill": 0.45,
         "name": "Power",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "pcb_color": "rgb(255, 0, 0)",
+        "priority": 3,
+        "schematic_color": "rgb(255, 0, 0)",
         "track_width": 0.25,
         "via_diameter": 0.8,
         "via_drill": 0.4,
         "wire_width": 6
       },
       {
+        "bus_width": 12,
         "clearance": 0.16,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.25,
+        "line_style": 0,
         "microvia_diameter": 0.8,
         "microvia_drill": 0.45,
         "name": "Powergrid",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "pcb_color": "rgb(255, 0, 0)",
+        "priority": 1,
+        "schematic_color": "rgb(255, 0, 0)",
         "track_width": 0.4,
         "via_diameter": 1.0,
-        "via_drill": 0.6
+        "via_drill": 0.6,
+        "wire_width": 10
       }
     ],
     "meta": {
@@ -899,15 +909,15 @@
         "pattern": "unconnected-(U6-Pad4)"
       },
       {
-        "netclass": "Power",
+        "netclass": "Powergrid",
         "pattern": "+3V3"
       },
       {
-        "netclass": "Power",
+        "netclass": "Powergrid",
         "pattern": "+BATT"
       },
       {
-        "netclass": "Power",
+        "netclass": "Powergrid",
         "pattern": "-BATT"
       },
       {
@@ -919,8 +929,12 @@
         "pattern": "/Power/BRIDGE_POWER"
       },
       {
-        "netclass": "Power",
+        "netclass": "GND",
         "pattern": "GND"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+3.3VA"
       }
     ]
   },
