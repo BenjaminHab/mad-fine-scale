@@ -5390,6 +5390,68 @@
 			)
 		)
 	)
+	(footprint "PCM_kikit:NPTH"
+		(layer "F.Cu")
+		(uuid "38c232a1-81d4-4ea4-b479-223bae31f6c9")
+		(at 115.85 62.65)
+		(property "Reference" "REF**"
+			(at 0 0.5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "d1129502-bc01-4c01-9116-a2418e7565f1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "NPTH"
+			(at 0 -0.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f08b35bc-b001-4d52-b751-272061b72bdc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0916d7cb-b33a-40ae-ac15-59f6204c1f34")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1c9567a7-3d12-401d-84bc-9cd363c1186d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr through_hole)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 1 1)
+			(drill 1)
+			(layers "*.Mask")
+			(uuid "6d04af7b-f371-4f3f-9fb0-d28fc69c0f73")
+		)
+		(embedded_fonts no)
+	)
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(placed yes)
 		(layer "F.Cu")
@@ -8477,6 +8539,68 @@
 			)
 		)
 	)
+	(footprint "PCM_kikit:NPTH"
+		(layer "F.Cu")
+		(uuid "4d6068c3-93f5-4a3a-a7c9-781d95df068c")
+		(at 114.8 62.65)
+		(property "Reference" "REF**"
+			(at 0 0.5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "a62a1c72-affc-460d-aa5b-0bceaae3ba62")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "NPTH"
+			(at 0 -0.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "96013675-50f4-470a-841b-70b5b4b25e3d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ec51cd14-f109-47b4-b3d3-6c0774913316")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cad324dc-2588-4231-9253-e0a51fe099f7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr through_hole)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 1 1)
+			(drill 1)
+			(layers "*.Mask")
+			(uuid "7186d342-05a5-4ae4-8376-8f7d0071724e")
+		)
+		(embedded_fonts no)
+	)
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(placed yes)
 		(layer "F.Cu")
@@ -10542,6 +10666,68 @@
 			)
 		)
 	)
+	(footprint "PCM_kikit:NPTH"
+		(layer "F.Cu")
+		(uuid "5e689434-4b2c-461e-bd40-323e6a29d874")
+		(at 113.75 62.65)
+		(property "Reference" "REF**"
+			(at 0 0.5 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "952d633b-8688-44b3-915c-b49c7706bc02")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "NPTH"
+			(at 0 -0.5 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "74d53177-0895-425c-85f2-7d74d4eef392")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b66b2563-ab33-4faa-8e68-dece319a2f7a")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "eddd7ed6-8dd7-4c58-aa7b-cc87002dbc5a")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr through_hole)
+		(pad "" np_thru_hole circle
+			(at 0 0)
+			(size 1 1)
+			(drill 1)
+			(layers "*.Mask")
+			(uuid "0ca18ed6-96da-4198-905b-20c6e5e3f9c2")
+		)
+		(embedded_fonts no)
+	)
 	(footprint "Package_TO_SOT_SMD:SOT-363_SC-70-6"
 		(layer "F.Cu")
 		(uuid "5f55e3d4-8211-4cda-8c85-6b921afa0aff")
@@ -11442,15 +11628,15 @@
 			(uuid "86433deb-8da1-410d-8384-607238fb7b31")
 		)
 		(embedded_fonts no)
-		(model "PEC12R-3217F-S0024.stp"
+		(model "/home/benjamin/Projects/common/kicad_libraries/3d/PEC12R-4120F-S0012.stp"
 			(offset
-				(xyz 2.499999962 -6.999999895 -1.049999937)
+				(xyz 2.5 -7 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 90)
+				(xyz -90 -0 -180)
 			)
 		)
 	)
@@ -15391,15 +15577,15 @@
 			(uuid "4d67cf48-bb21-41f3-8e00-02697cf995d0")
 		)
 		(embedded_fonts no)
-		(model "12401610E4#2A.stp"
+		(model "/home/benjamin/Projects/common/kicad_libraries/3d/12401610E4#2A.stp"
 			(offset
-				(xyz 0.1099999978 -5.15999977 1.529999948)
+				(xyz 0.125 -5.225 1.5)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 90)
+				(xyz -0 -0 90)
 			)
 		)
 	)

@@ -1964,7 +1964,7 @@
 				)
 			)
 		)
-		(property "Value" "PEC12R-3217F-S0024"
+		(property "Value" "PEC12R-4120F-S0012"
 			(at 129.54 83.4546 0)
 			(effects
 				(font
@@ -2095,6 +2095,10 @@
 		(instances
 			(project ""
 				(path "/adf38c8f-bada-4838-acc6-e6af19946742/82306041-d571-45f1-89c8-d149d0eff0c6"
+					(reference "S1")
+					(unit 1)
+				)
+				(path "/adf38c8f-bada-4838-acc6-e6af19946742/8a4812e6-01d2-4a59-bc73-706ba54f858f"
 					(reference "S1")
 					(unit 1)
 				)
