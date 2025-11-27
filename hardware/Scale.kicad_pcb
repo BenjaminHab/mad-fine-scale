@@ -50595,5 +50595,5 @@
 			"d2da4c9b-5724-4841-abbc-da06d6896053" "ff68df58-3f5f-4cde-a4a3-109fcf89911e"
 		)
 	)
-	(embedded_fonts no)
+	(embedded_fonts yes)
 )
