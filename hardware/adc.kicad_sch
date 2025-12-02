@@ -1520,6 +1520,26 @@
 		)
 		(uuid "1d60347a-0820-4bd3-9d05-3b21f0fe57e6")
 	)
+	(wire
+		(pts
+			(xy 99.06 101.6) (xy 107.95 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25a8ffec-552f-40ce-a5fb-ffbcc14f9e28")
+	)
+	(wire
+		(pts
+			(xy 99.06 106.68) (xy 107.95 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2619ea6d-3360-4d99-a291-ed904c2ab8f6")
+	)
 	(bus
 		(pts
 			(xy 187.96 101.6) (xy 187.96 104.14)
@@ -1619,6 +1639,16 @@
 			(type default)
 		)
 		(uuid "4813f6c8-9127-4267-b78f-1ede8f045105")
+	)
+	(wire
+		(pts
+			(xy 99.06 99.06) (xy 107.95 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "484340bb-b485-4ffe-8b85-90f026984a52")
 	)
 	(wire
 		(pts
@@ -1952,6 +1982,16 @@
 	)
 	(wire
 		(pts
+			(xy 99.06 104.14) (xy 107.95 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e57e3457-bd57-4843-8f7f-df0b60c09baa")
+	)
+	(wire
+		(pts
 			(xy 163.83 96.52) (xy 166.37 96.52)
 		)
 		(stroke
@@ -2012,7 +2052,7 @@
 	)
 	(hierarchical_label "INA_OUT_FILTERED_PASSIVE"
 		(shape output)
-		(at 107.95 106.68 180)
+		(at 99.06 106.68 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2045,7 +2085,7 @@
 	)
 	(hierarchical_label "INA_OUT_FILTERED_ACTIVE"
 		(shape output)
-		(at 107.95 104.14 180)
+		(at 99.06 104.14 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2067,7 +2107,7 @@
 	)
 	(hierarchical_label "INA_IN_P"
 		(shape output)
-		(at 107.95 99.06 180)
+		(at 99.06 99.06 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2100,7 +2140,7 @@
 	)
 	(hierarchical_label "INA_IN_N"
 		(shape output)
-		(at 107.95 101.6 180)
+		(at 99.06 101.6 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2119,6 +2159,130 @@
 			(justify left)
 		)
 		(uuid "df06d004-c729-40c8-9e58-b92b52f454ca")
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 165.1 93.98 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "12d37d36-ef96-4387-a7f6-2e704373f92b")
+		(property "Netclass" "Bus"
+			(at 165.7985 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -48.26 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 165.1 99.06 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2167f3bc-3db8-4beb-8572-121343fd243b")
+		(property "Netclass" "Bus"
+			(at 165.7985 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -48.26 1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 165.1 101.6 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "715efcc3-7e34-4fc5-a52b-77581be9f9b6")
+		(property "Netclass" "Bus"
+			(at 165.7985 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -48.26 3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 165.1 104.14 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8f0f4d93-1d0a-4fdf-8306-c421ab7b4be8")
+		(property "Netclass" "Bus"
+			(at 165.7985 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -48.26 6.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
 	)
 	(netclass_flag ""
 		(length 2.54)

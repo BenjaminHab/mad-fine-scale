@@ -2022,7 +2022,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 134.62) (xy 146.05 134.62)
+			(xy 142.24 134.62) (xy 144.78 134.62)
 		)
 		(stroke
 			(width 0)
@@ -2852,7 +2852,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 134.62) (xy 154.94 134.62)
+			(xy 152.4 134.62) (xy 154.94 134.62)
 		)
 		(stroke
 			(width 0)
@@ -3388,6 +3388,130 @@
 			(justify left)
 		)
 		(uuid "f0a0c8d1-3b23-490a-9be0-6e83c6867736")
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 153.67 107.95 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "30fb7851-8f0d-4c61-b5ac-d1beccc2e01f")
+		(property "Netclass" "Analog"
+			(at 156.21 107.2515 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -58.42 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 237.49 40.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "619c5c31-da18-4112-b15e-f7a66163cc8b")
+		(property "Netclass" "Analog"
+			(at 238.1885 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at 25.4 -69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 224.79 34.29 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "780caea0-5ebd-4d98-8bd0-0403f191ebc1")
+		(property "Netclass" "Analog"
+			(at 225.4885 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at 12.7 -76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 153.67 134.62 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b145e00c-5b83-42d6-baf7-a58e547ca911")
+		(property "Netclass" "Analog"
+			(at 154.3685 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Component Class" ""
+			(at -58.42 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -5843,7 +5967,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 149.86 134.62 90)
+		(at 148.59 134.62 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5852,7 +5976,7 @@
 		(fields_autoplaced yes)
 		(uuid "8302dfdb-f2e4-4211-92d1-3c4781c1ed61")
 		(property "Reference" "R45"
-			(at 149.86 128.27 90)
+			(at 148.59 128.27 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5860,7 +5984,7 @@
 			)
 		)
 		(property "Value" "1k 1%"
-			(at 149.86 130.81 90)
+			(at 148.59 130.81 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5868,7 +5992,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 149.86 136.398 90)
+			(at 148.59 136.398 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5877,7 +6001,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 149.86 134.62 0)
+			(at 148.59 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5886,7 +6010,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 149.86 134.62 0)
+			(at 148.59 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -513,11 +513,31 @@
         "wire_width": 6
       },
       {
+        "bus_width": 12,
+        "line_style": 0,
+        "name": "Analog",
+        "pcb_color": "rgb(221, 0, 255)",
+        "priority": 0,
+        "schematic_color": "rgb(221, 0, 255)",
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "line_style": 0,
+        "name": "Bus",
+        "pcb_color": "rgb(242, 206, 0)",
+        "priority": 1,
+        "schematic_color": "rgb(242, 206, 0)",
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
         "line_style": 0,
         "name": "GND",
         "pcb_color": "rgb(92, 92, 92)",
-        "priority": 0,
-        "schematic_color": "rgb(92, 92, 92)"
+        "priority": 2,
+        "schematic_color": "rgb(92, 92, 92)",
+        "wire_width": 6
       },
       {
         "bus_width": 12,
@@ -529,7 +549,7 @@
         "microvia_drill": 0.45,
         "name": "Min",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
+        "priority": 4,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.1524,
         "via_diameter": 0.6,
@@ -546,7 +566,7 @@
         "microvia_drill": 0.45,
         "name": "Power",
         "pcb_color": "rgb(255, 0, 0)",
-        "priority": 3,
+        "priority": 5,
         "schematic_color": "rgb(255, 0, 0)",
         "track_width": 0.25,
         "via_diameter": 0.8,
@@ -563,7 +583,7 @@
         "microvia_drill": 0.45,
         "name": "Powergrid",
         "pcb_color": "rgb(255, 0, 0)",
-        "priority": 1,
+        "priority": 3,
         "schematic_color": "rgb(255, 0, 0)",
         "track_width": 0.4,
         "via_diameter": 1.0,
@@ -597,6 +617,9 @@
       "GND": [
         "Powergrid"
       ],
+      "Net-(C15-Pad1)": [
+        "Analog"
+      ],
       "Net-(Q3A-D)": [
         "Powergrid"
       ],
@@ -605,6 +628,27 @@
       ],
       "Net-(U2-DVDD)": [
         "Power"
+      ],
+      "Net-(U2-MCLKIN)": [
+        "Bus"
+      ],
+      "Net-(U2-SCK)": [
+        "Bus"
+      ],
+      "Net-(U2-SDI)": [
+        "Bus"
+      ],
+      "Net-(U2-SDO)": [
+        "Bus"
+      ],
+      "Net-(U3-V_{FG})": [
+        "Analog"
+      ],
+      "Net-(U4-P0W)": [
+        "Analog"
+      ],
+      "Net-(U9--)": [
+        "Analog"
       ]
     },
     "netclass_patterns": [
@@ -621,19 +665,19 @@
         "pattern": "/Encoder/ENCODER_BUTTON"
       },
       {
-        "netclass": "Min",
+        "netclass": "Bus",
         "pattern": "/I2C_SCL"
       },
       {
-        "netclass": "Min",
+        "netclass": "Bus",
         "pattern": "/I2C_SDA"
       },
       {
-        "netclass": "Min",
+        "netclass": "Analog",
         "pattern": "/Instrumentation Amplifier/BRIDGE_A"
       },
       {
-        "netclass": "Min",
+        "netclass": "Analog",
         "pattern": "/Instrumentation Amplifier/BRIDGE_B"
       },
       {
@@ -645,7 +689,7 @@
         "pattern": "/Instrumentation Amplifier/INA_ENABLE"
       },
       {
-        "netclass": "Min",
+        "netclass": "Analog",
         "pattern": "/Instrumentation Amplifier/INA_OUT"
       },
       {
@@ -693,7 +737,7 @@
         "pattern": "/MCU/MCU_VREF"
       },
       {
-        "netclass": "Min",
+        "netclass": "Bus",
         "pattern": "/MCU/OSC_CLK"
       },
       {
@@ -701,11 +745,11 @@
         "pattern": "/MCU/OSC_EN"
       },
       {
-        "netclass": "Min",
+        "netclass": "Bus",
         "pattern": "/MCU/SWDCLK"
       },
       {
-        "netclass": "Min",
+        "netclass": "Bus",
         "pattern": "/MCU/SWDIO"
       },
       {
@@ -721,11 +765,11 @@
         "pattern": "/MCU/USART_RTS"
       },
       {
-        "netclass": "Min",
+        "netclass": "Bus",
         "pattern": "/MCU/USART_RX"
       },
       {
-        "netclass": "Min",
+        "netclass": "Bus",
         "pattern": "/MCU/USART_TX"
       },
       {
@@ -935,6 +979,62 @@
       {
         "netclass": "Power",
         "pattern": "+3.3VA"
+      },
+      {
+        "netclass": "Bus",
+        "pattern": "*CLK"
+      },
+      {
+        "netclass": "Bus",
+        "pattern": "*SCL"
+      },
+      {
+        "netclass": "Bus",
+        "pattern": "*SCK"
+      },
+      {
+        "netclass": "Bus",
+        "pattern": "*MISO"
+      },
+      {
+        "netclass": "Bus",
+        "pattern": "*MOSI"
+      },
+      {
+        "netclass": "Default",
+        "pattern": ""
+      },
+      {
+        "netclass": "Bus",
+        "pattern": "*SDA"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "/ADC/INA_OUT_FILTERED_PASSIVE"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "/ADC/INA_OUT_FILTERED_ACTIVE"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "/Instrumentation Amplifier/INA_IN_N"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "/Instrumentation Amplifier/INA_IN_P"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "/Instrumentation Amplifier/INA_OUT_UNFILTERED"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "/Instrumentation Amplifier/INA_VREF"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "/ADC/ADC_VREF"
       }
     ]
   },
@@ -943,7 +1043,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "Gerber",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "Scale.step",
