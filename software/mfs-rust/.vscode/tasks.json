@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "cargo",
-			"command": "build",
+			"command": "build --bin ${fileBasenameNoExtension} --release",
 			"problemMatcher": [
 				"$rustc"
 			],
