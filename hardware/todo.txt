@@ -1,0 +1,24 @@
+- input and output filters for INA (copy part of Microchip reference design for MCP6N11: ARD00354);
+    alternative: active filter from Art of Electronics for steeper cutoff! (e.g. MFB filter)
+    Remember: Set the -3dB point to half the doable sampling rate to avoid aliasing noise (Nyquist frequency)!
+    -> Argument in favor of active filter somewhere: Steeper falloff, thus better separation between sampling frequency and highest allowable passing frequency
+    Is it possible to integrate the active filter into the INA feedback to use fewer components?
+    -> Maybe use different filters and read the results pre/post filter in at different ADC pins?
+    Option: Use switched-capacitor low-pass filter, where the corner frequency can be set by the clock frequency. But: Requires dedicated IC!
+- include test points including something for ground to fix an alligator clip (Series resistors for analog pads!)
+v Decouple analog supply voltage (e.g. with LC filter)
+v provide reference voltage tied to 1/2 supply voltage to use INA in linear range! (See ARD00354 buffered voltage reference)
+- Possibly use STM32G071 because it can be fed a voltage reference?
+v Read in INA reference voltage as well, use it for compensation in code (cf. INA reference design)
+- Embed rheo into resistor network to be able to fine-tune the gain from ~200 to ~1200 instead of 1 to 1334
+- Can a SPICE simulation predict noise?
+- Is it possible to eliminate inconsistencies between gains somehow? Does the reference voltage reading help in this regard?
+- Can either the voltage regulator or the battery output be switched off, so the stm32 alone is running via vbat pin (tolerance 4V)? -> reduce power consumption in standby, use fewer mosfets; Problem: BMS switches low side of battery. NB: VBAT ADC channel reads 1/3 of actual battery voltage (Datasheet) or 1/2 (reference manual)
+- test BMS and check reference design; what happens when charging via USB? Does VUSB = 5V fry the MCU, if no battery ist present?
+- Does the BMS allow for simulatneous charging and usage of
+- check LDO datasheet -> remove MOSFETs for bridge and display, possibly tie INA_EN to 3V3 if enabling LDO should be possible
+- 18650 holder integration?
+- Check ADC Reference Design
+
+
+

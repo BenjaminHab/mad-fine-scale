@@ -14,12 +14,13 @@
             "chip": "STM32G070CBTx",
             "flashingConfig": {
                 "flashingEnabled": true,
-                "haltAfterReset": true
+                "haltAfterReset": false
             },
             "coreConfigs": [
                 {
                     "coreIndex": 0,
-                    "programBinary": "./target/thumbv6m-none-eabi/debug/${workspaceFolderBasename}"
+                    "programBinary": "./target/thumbv6m-none-eabi/debug/${workspaceFolderBasename}",
+                    "rttEnabled": true
                 }
             ]
         }
