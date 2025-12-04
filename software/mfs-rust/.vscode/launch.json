@@ -19,9 +19,9 @@
             "coreConfigs": [
                 {
                     "coreIndex": 0,
-                    "programBinary": "./target/thumbv6m-none-eabi/debug/${fileBasenameNoExtension}",
+                    "programBinary": "target/thumbv6m-none-eabi/debug/${fileBasenameNoExtension}",
                     "rttEnabled": true, 
-                    "svdFile": "./STM32G070.svd"
+                    "svdFile": "STM32G070.svd"
                 }
             ]
         }
