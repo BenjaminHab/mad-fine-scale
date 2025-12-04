@@ -25,3 +25,8 @@ Andere ADC-Channels auf dem gleichen Chip rauschen ganz normal (Moment, Korrektu
 Gleicher Channel auf anderem Chip rauscht normal, selbst der OP-Amp Channel auf einem anderen Chip rauscht normal und gibt sinnvolle Daten aus, verdammt!!!
 Mit der Wheatstone-Brücke abgesteckt und später angesteckt tritt überhaupt kein Rauschen auf, der Wert bleibt exakt auf dem gleichen Niveau???
 Mit einem Thermocouple tritt wieder die grobe Quantisierung auf, kein Rauschen, keine Veränderung durch Erwärmen erkennbar (Angesteckt via Breadboard)
+
+
+Display: 
+Example from online resource not working, SCL signal very unclean. 
+Pasted pullup config from existing code with success, though signals still look pretty dirty and the display does not show anything.
