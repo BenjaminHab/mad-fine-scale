@@ -1786,6 +1786,16 @@
 		)
 		(uuid "ae03d69e-6fcb-4e65-ab34-5c6f5b2e1f0d")
 	)
+	(text "Replaced 20k with 10k in prototype!!!\nReplaced 10R with 120R in prototype!!!\n"
+		(exclude_from_sim no)
+		(at 235.458 107.188 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ba164b31-1ddf-428c-9a72-522f43ce5734")
+	)
 	(text "Active Multiple-Feedback type 2nd order lowpass filter with corner frequency \nf_c = 1/(sqrt(2)*2*pi*20e3*50e-9) = 112.54Hz\nAoE pg 413\n\n"
 		(exclude_from_sim no)
 		(at 249.174 71.882 0)
