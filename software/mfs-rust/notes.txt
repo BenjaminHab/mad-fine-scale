@@ -30,3 +30,7 @@ Mit einem Thermocouple tritt wieder die grobe Quantisierung auf, kein Rauschen, 
 Display: 
 Example from online resource not working, SCL signal very unclean. 
 Pasted pullup config from existing code with success, though signals still look pretty dirty and the display does not show anything.
+Next steps: Switch on POWER!!!
+
+
+Check signals with oscilloscope and check for brownout
