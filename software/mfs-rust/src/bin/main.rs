@@ -63,7 +63,7 @@ async fn main(_spawner: Spawner) {
 
     let mut led = Output::new(p.PB4, Level::High, Speed::Low);
     let mut ina_enable = Output::new(p.PA15, Level::Low, Speed::Low);
-    let mut bridge_enable = Output::new(p.PA3, Level::Low, Speed::Low); // P-channel MOSFET -> Pull low to enable
+    let mut bridge_enable = Output::new(p.PD2, Level::Low, Speed::Low); // P-channel MOSFET -> Pull low to enable
 
     // Wait a little, so the INA gets the message to self-calibrate
     Timer::after_millis(100).await;
@@ -89,6 +89,10 @@ async fn main(_spawner: Spawner) {
     adc.oversampling_enable(true);
 
     let mut pin = p.PA1;
+    // PA0: INA_VREF
+    // PA1: INA_OUT_UNFILTERED
+    // PA2: INA_OUT_FILTERED_PASSIVE
+    // PA3: INA_OUT_FILTERED_ACTIVE
     let mut vrefint = adc.enable_vrefint();
     let vrefint_sample = adc.blocking_read(&mut vrefint);
     info!("ADC reference value is {}", vrefint_sample);
