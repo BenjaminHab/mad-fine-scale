@@ -35,3 +35,4 @@ portable-atomic = { version = "1.5", features = ["unsafe-assume-single-core"] }
 static_cell = "2.1.1"
 
 ssd1306 = { version = "0.10.0", features = ["async"] }
+mcp3x6x = { version = "0.3.1", features = ["__24_bit", "defmt", "__has_ch2_ch3"] }
